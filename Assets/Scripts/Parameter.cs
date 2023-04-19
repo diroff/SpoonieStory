@@ -18,12 +18,11 @@ public class Parameter : MonoBehaviour
 
     public UnityAction<int, int> ValueChanged;
 
-    private void Awake()
+    private void Start()
     {
         _currentValue = _startValue;
 
-        if (IsMaximum()) _currentValue = _maxValue;
-        if(IsMinimum()) _currentValue = _minValue;
+        FixValues();
 
         ValueChanged?.Invoke(_currentValue, _maxValue);
     }
@@ -34,6 +33,7 @@ public class Parameter : MonoBehaviour
             return;
 
         _currentValue += count;
+        FixValues();
         ValueChanged?.Invoke(_currentValue, _maxValue);
     }
 
@@ -43,7 +43,14 @@ public class Parameter : MonoBehaviour
             return;
 
         _currentValue -= count;
+        FixValues();
         ValueChanged?.Invoke(_currentValue, _maxValue);
+    }
+    
+    private void FixValues()
+    {
+        if (IsMaximum()) _currentValue = _maxValue;
+        if (IsMinimum()) _currentValue = _minValue;
     }
 
     public bool IsMaximum() { return _currentValue >= _maxValue; }

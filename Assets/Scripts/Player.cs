@@ -9,9 +9,4 @@ public class Player : MonoBehaviour
     [SerializeField] private Parameter _hygiene;
     [Space]
     [SerializeField] private TimeManagment _timeManagment;
-
-    public void WaitTenSeconds()
-    {
-        _timeManagment.SpendTime(0, 10);
-    }
 }

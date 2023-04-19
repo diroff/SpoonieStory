@@ -27,7 +27,7 @@ public class TimeManagment : MonoBehaviour
     public UnityAction<int> HoursChanged;
     public UnityAction<int> MinutesChanged;
 
-    private void Awake()
+    private void Start()
     {
         _currentDays = _startDays;
         _currentHours = _startHours;
@@ -58,16 +58,6 @@ public class TimeManagment : MonoBehaviour
 
         HoursChanged?.Invoke(_currentHours);
         MinutesChanged?.Invoke(_currentMinutes);
-    }
-
-    public void AddHour()
-    {
-        SpendTime(1, 0);
-    }
-
-    public void AddTenMinutes()
-    {
-        SpendTime(0, 10);
     }
 
     public void SetNextDay()
