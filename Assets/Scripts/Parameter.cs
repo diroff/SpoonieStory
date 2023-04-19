@@ -18,12 +18,14 @@ public class Parameter : MonoBehaviour
 
     public UnityAction<int, int> ValueChanged;
 
-    private void Start()
+    private void Awake()
     {
         _currentValue = _startValue;
-
         FixValues();
+    }
 
+    private void Start()
+    {
         ValueChanged?.Invoke(_currentValue, _maxValue);
     }
 

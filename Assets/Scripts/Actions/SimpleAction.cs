@@ -24,15 +24,9 @@ public class SimpleAction : MonoBehaviour
     [Header("Buttons setting")]
     [SerializeField] private bool _disableInMaximum = true;
     [SerializeField] private bool _disableInMinimum = true;
-
-    private Actions _actions;
-    private Button _actionButton;
-
-    private void Awake()
-    {
-        _actionButton = GetComponent<Button>();
-        _actions = GetComponentInParent<Actions>();
-    }
+    [Space]
+    [SerializeField] private Actions _actions;
+    [SerializeField] private Button _actionButton;
 
     public virtual void DoAction()
     {

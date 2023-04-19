@@ -7,7 +7,7 @@ public class Actions : MonoBehaviour
 
     private void OnEnable()
     {
-        //CheckActionsState();
+        CheckActionsState();
     }
 
     public void CheckActionsState()
