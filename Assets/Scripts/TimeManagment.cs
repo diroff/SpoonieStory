@@ -1,18 +1,19 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class TimeManagment : MonoBehaviour
 {
-    [SerializeField] private int _startDays; 
-    [SerializeField] private int _startHours; 
-    [SerializeField] private int _startMinutes; 
+    [SerializeField] private int _startDays;
+    [SerializeField] private int _startHours;
+    [SerializeField] private int _startMinutes;
 
     private int _currentDays;
     private int _currentHours;
     private int _currentMinutes;
     private int _currentWeekDayNumber;
+
+    private int _previousHour;
 
     private List<string> _weekDays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
     private string _currentWeekDay;
@@ -32,6 +33,7 @@ public class TimeManagment : MonoBehaviour
         _currentDays = _startDays;
         _currentHours = _startHours;
         _currentMinutes = _startMinutes;
+        _previousHour = _currentHours;
         _currentWeekDayNumber = 0;
 
         HoursChanged?.Invoke(_currentHours);
@@ -41,6 +43,8 @@ public class TimeManagment : MonoBehaviour
 
     public void SpendTime(int hours, int minutes)
     {
+        _previousHour = _currentHours;
+
         _currentHours += hours;
         _currentMinutes += minutes;
 
@@ -52,7 +56,7 @@ public class TimeManagment : MonoBehaviour
 
         if (IsDayChanged())
         {
-            _currentHours = 0;
+            _currentHours = _currentHours - 24;
             SetNextDay();
         }
 
@@ -72,5 +76,5 @@ public class TimeManagment : MonoBehaviour
         DayChanged?.Invoke(_currentDays, _weekDays[_currentWeekDayNumber]);
     }
 
-    private bool IsDayChanged() { return _currentHours == 24; }
+    private bool IsDayChanged() { return _currentHours >= 24 && _previousHour < 24; }
 }
