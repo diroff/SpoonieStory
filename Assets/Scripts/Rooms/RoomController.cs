@@ -24,6 +24,9 @@ public class RoomController : MonoBehaviour
 
     public void CloseRoom()
     {
-        OpenRoom(_currentRoom.PreviousRoom);
+        _currentRoom.SetRoomState(false);
+        _nextRoom = _currentRoom.PreviousRoom;
+        _nextRoom.SetRoomState(true);
+        _currentRoom = _nextRoom;
     }
 }
