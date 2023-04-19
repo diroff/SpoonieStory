@@ -17,8 +17,12 @@ public class SimpleAction : MonoBehaviour
     [Space]
     [SerializeField] private int _changeValue;
     [Header("Time cost")]
-    [SerializeField] private int _minutesActionCost;
     [SerializeField] private int _hoursActionCost;
+    [SerializeField] private int _minutesActionCost;
+    [Space]
+    [SerializeField] private bool _isRandomTime = false;
+    [SerializeField] private int _maxHoursActionCost;
+    [SerializeField] private int _maxMinutesActionCost;
     [Space]
     [SerializeField] private TimeManagment _timeManagment;
     [Header("Buttons setting")]
@@ -42,7 +46,7 @@ public class SimpleAction : MonoBehaviour
 
         _hunger.ReduceValue(_actionHungerCost);
         _hygiene.ReduceValue(_actionHygieneCost);
-        _timeManagment.SpendTime(_hoursActionCost, _minutesActionCost);
+        SpendTime();
         _actions.CheckActionsState();
     }
 
@@ -65,16 +69,35 @@ public class SimpleAction : MonoBehaviour
             _actionButton.interactable = true;
     }
 
-    public bool IsMaximum() 
-    { 
-        if(_disableInMaximum)
+    private void SpendTime()
+    {
+        if (!_isRandomTime)
+        {
+            _timeManagment.SpendTime(_hoursActionCost, _minutesActionCost);
+            return;
+        }
+
+        int minutes = 0;
+        int hours = 0;
+
+        if (_minutesActionCost != 0)
+            minutes = Random.Range(_minutesActionCost, _maxMinutesActionCost + 1);
+        if (_hoursActionCost != 0)
+            hours = Random.Range(_hoursActionCost, _maxHoursActionCost + 1);
+
+        _timeManagment.SpendTime(hours, minutes);
+    }
+
+    public bool IsMaximum()
+    {
+        if (_disableInMaximum)
             return _variableParameter.IsMaximum();
 
         return false;
     }
-    public bool IsMinimum() 
-    { 
-        if(_disableInMinimum)
+    public bool IsMinimum()
+    {
+        if (_disableInMinimum)
             return _variableParameter.IsMinimum();
 
         return false;
