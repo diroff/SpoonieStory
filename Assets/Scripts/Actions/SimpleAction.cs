@@ -69,7 +69,7 @@ public class SimpleAction : MonoBehaviour
             _actionButton.interactable = true;
     }
 
-    private void SpendTime()
+    protected void SpendTime()
     {
         if (!_isRandomTime)
         {

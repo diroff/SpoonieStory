@@ -48,6 +48,13 @@ public class Parameter : MonoBehaviour
         FixValues();
         ValueChanged?.Invoke(_currentValue, _maxValue);
     }
+
+    public void SetValue(int count)
+    {
+        _currentValue = count;
+        FixValues();
+        ValueChanged?.Invoke(_currentValue, _maxValue);
+    }
     
     private void FixValues()
     {
