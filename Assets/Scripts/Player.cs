@@ -9,4 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Parameter _hygiene;
     [Space]
     [SerializeField] private TimeManagment _timeManagment;
+
+    private void Start()
+    {
+        _spoons.AddValue(Random.Range(0, 7));
+    }
 }
