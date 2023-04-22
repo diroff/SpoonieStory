@@ -9,6 +9,7 @@ public class StatsDisplayer : MonoBehaviour
     private void OnEnable()
     {
         _parameter.ValueChanged += DisplayParameterValue;
+        DisplayParameterValue(_parameter.CurrentValue, _parameter.MaxValue);
     }
 
     private void OnDisable()
