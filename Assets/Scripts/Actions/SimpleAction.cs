@@ -29,7 +29,7 @@ public class SimpleAction : MonoBehaviour
     [SerializeField] private bool _disableInMaximum = true;
     [SerializeField] private bool _disableInMinimum = true;
     [Space]
-    [SerializeField] private Actions _actions;
+    [SerializeField] protected Actions _actions;
     [SerializeField] private Button _actionButton;
 
     public virtual void DoAction()
