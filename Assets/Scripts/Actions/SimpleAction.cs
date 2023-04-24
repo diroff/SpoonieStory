@@ -36,6 +36,9 @@ public class SimpleAction : MonoBehaviour
     [SerializeField] private int _minHoursActivation;
     [SerializeField] private int _maxHoursActivation;
 
+    protected int _hoursBeforeAction;
+    protected int _hoursSpent;
+
     public virtual void DoAction()
     {
         if (!IsEnoughSpoons() || !IsEqualCondition())
@@ -57,10 +60,7 @@ public class SimpleAction : MonoBehaviour
     public bool IsEnoughSpoons()
     {
         if (_spoons.CurrentValue < _actionSpoonsCost)
-        {
-            Debug.Log("Not enough spoons!");
             return false;
-        }
 
         return true;
     }
@@ -68,9 +68,9 @@ public class SimpleAction : MonoBehaviour
     public void SetButtonInteractable()
     {
         if (!IsEnoughSpoons() || !IsEqualCondition() || IsMaximum() || IsMinimum() || !IsAvailableTime())
-            _actionButton.interactable = false;
+            _actionButton.gameObject.SetActive(false);
         else
-            _actionButton.interactable = true;
+            _actionButton.gameObject.SetActive(true);
     }
 
     protected void SpendTime()
@@ -84,12 +84,16 @@ public class SimpleAction : MonoBehaviour
         int minutes = 0;
         int hours = 0;
 
+        _hoursBeforeAction = _timeManagment.CurrentHours;
+
         if (_minutesActionCost != 0)
             minutes = Random.Range(_minutesActionCost, _maxMinutesActionCost + 1);
         if (_hoursActionCost != 0)
             hours = Random.Range(_hoursActionCost, _maxHoursActionCost + 1);
 
         _timeManagment.SpendTime(hours, minutes);
+
+        _hoursSpent = hours;
     }
 
     private bool IsAvailableTime()

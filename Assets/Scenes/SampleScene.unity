@@ -1049,7 +1049,7 @@ GameObject:
   - component: {fileID: 87920621}
   - component: {fileID: 87920620}
   - component: {fileID: 87920619}
-  - component: {fileID: 87920618}
+  - component: {fileID: 87920622}
   m_Layer: 5
   m_Name: SleepDay
   m_TagString: Untagged
@@ -1078,39 +1078,6 @@ RectTransform:
   m_AnchoredPosition: {x: 485.99527, y: -335.76025}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &87920618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87920616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748803965d9560f4fb6906f318a9ab55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spoons: {fileID: 140252656}
-  _hunger: {fileID: 1690864676}
-  _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 140252656}
-  _actionSpoonsCost: 0
-  _actionHungerCost: 1
-  _actionHygieneCost: -2
-  _changeValue: 8
-  _hoursActionCost: 8
-  _minutesActionCost: 0
-  _isRandomTime: 0
-  _maxHoursActionCost: 0
-  _maxMinutesActionCost: 0
-  _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 1
-  _disableInMinimum: 0
-  _actions: {fileID: 1280389676}
-  _actionButton: {fileID: 87920619}
-  _limitedTime: 0
-  _minHoursActivation: 0
-  _maxHoursActivation: 0
 --- !u!114 &87920619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,8 +1122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 87920618}
-        m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
+      - m_Target: {fileID: 87920622}
+        m_TargetAssemblyTypeName: SleepAction, Assembly-CSharp
         m_MethodName: DoAction
         m_Mode: 1
         m_Arguments:
@@ -1205,6 +1172,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87920616}
   m_CullTransparentMesh: 1
+--- !u!114 &87920622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87920616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aecffacfb3cc1094588f8749ee503ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spoons: {fileID: 140252656}
+  _hunger: {fileID: 1690864676}
+  _hygiene: {fileID: 740101156}
+  _variableParameter: {fileID: 140252656}
+  _actionSpoonsCost: 0
+  _actionHungerCost: 1
+  _actionHygieneCost: -2
+  _changeValue: 0
+  _hoursActionCost: 2
+  _minutesActionCost: 0
+  _isRandomTime: 1
+  _maxHoursActionCost: 4
+  _maxMinutesActionCost: 0
+  _timeManagment: {fileID: 24715461}
+  _disableInMaximum: 1
+  _disableInMinimum: 1
+  _actions: {fileID: 1280389676}
+  _actionButton: {fileID: 87920619}
+  _limitedTime: 1
+  _minHoursActivation: 6
+  _maxHoursActivation: 20
+  _sleepEvent: {fileID: 1318496060}
 --- !u!1 &107893036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,7 +3839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sleep day
+  m_text: Sleep
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9829,7 +9830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sleep night
+  m_text: Sleep
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10866,8 +10867,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomActions:
   - {fileID: 581280616}
-  - {fileID: 1483289437}
-  - {fileID: 87920618}
+  - {fileID: 1483289441}
+  - {fileID: 87920622}
   - {fileID: 951314020}
 --- !u!114 &1280389677
 MonoBehaviour:
@@ -11019,7 +11020,6 @@ MonoBehaviour:
   _hungry: {fileID: 1690864676}
   _hygiene: {fileID: 740101156}
   _timeManagment: {fileID: 24715461}
-  _sleepEvent: {fileID: 1318496060}
 --- !u!4 &1318496059
 Transform:
   m_ObjectHideFlags: 0
@@ -11050,7 +11050,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spoons: {fileID: 140252656}
-  _maxBonus: 2
 --- !u!1 &1321358809
 GameObject:
   m_ObjectHideFlags: 0
@@ -12167,7 +12166,7 @@ GameObject:
   - component: {fileID: 1483289440}
   - component: {fileID: 1483289439}
   - component: {fileID: 1483289438}
-  - component: {fileID: 1483289437}
+  - component: {fileID: 1483289441}
   m_Layer: 5
   m_Name: SleepNight
   m_TagString: Untagged
@@ -12196,39 +12195,6 @@ RectTransform:
   m_AnchoredPosition: {x: 485.99527, y: -335.76025}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1483289437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483289435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748803965d9560f4fb6906f318a9ab55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spoons: {fileID: 140252656}
-  _hunger: {fileID: 1690864676}
-  _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 140252656}
-  _actionSpoonsCost: 0
-  _actionHungerCost: 1
-  _actionHygieneCost: -2
-  _changeValue: 8
-  _hoursActionCost: 8
-  _minutesActionCost: 0
-  _isRandomTime: 0
-  _maxHoursActionCost: 0
-  _maxMinutesActionCost: 0
-  _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 1
-  _disableInMinimum: 0
-  _actions: {fileID: 1280389676}
-  _actionButton: {fileID: 1483289438}
-  _limitedTime: 1
-  _minHoursActivation: 20
-  _maxHoursActivation: 6
 --- !u!114 &1483289438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12273,8 +12239,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1483289437}
-        m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
+      - m_Target: {fileID: 1483289441}
+        m_TargetAssemblyTypeName: SleepAction, Assembly-CSharp
         m_MethodName: DoAction
         m_Mode: 1
         m_Arguments:
@@ -12323,6 +12289,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483289435}
   m_CullTransparentMesh: 1
+--- !u!114 &1483289441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483289435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aecffacfb3cc1094588f8749ee503ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spoons: {fileID: 140252656}
+  _hunger: {fileID: 1690864676}
+  _hygiene: {fileID: 740101156}
+  _variableParameter: {fileID: 140252656}
+  _actionSpoonsCost: 0
+  _actionHungerCost: 1
+  _actionHygieneCost: -2
+  _changeValue: 0
+  _hoursActionCost: 5
+  _minutesActionCost: 0
+  _isRandomTime: 1
+  _maxHoursActionCost: 10
+  _maxMinutesActionCost: 0
+  _timeManagment: {fileID: 24715461}
+  _disableInMaximum: 1
+  _disableInMinimum: 1
+  _actions: {fileID: 1280389676}
+  _actionButton: {fileID: 1483289438}
+  _limitedTime: 1
+  _minHoursActivation: 20
+  _maxHoursActivation: 6
+  _sleepEvent: {fileID: 1318496060}
 --- !u!1 &1499493419
 GameObject:
   m_ObjectHideFlags: 0
@@ -14604,9 +14604,9 @@ MonoBehaviour:
   _disableInMinimum: 0
   _actions: {fileID: 748310985}
   _actionButton: {fileID: 1885628196}
-  _limitedTime: 1
-  _minHoursActivation: 9
-  _maxHoursActivation: 10
+  _limitedTime: 0
+  _minHoursActivation: 0
+  _maxHoursActivation: 0
   _dishes: {fileID: 1732207039}
   _food: {fileID: 2083791916}
   _dishesCost: 2
