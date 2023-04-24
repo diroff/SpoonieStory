@@ -31,6 +31,10 @@ public class SimpleAction : MonoBehaviour
     [Space]
     [SerializeField] protected Actions _actions;
     [SerializeField] private Button _actionButton;
+    [Header("Time limited")]
+    [SerializeField] private bool _limitedTime = false;
+    [SerializeField] private int _minHoursActivation;
+    [SerializeField] private int _maxHoursActivation;
 
     public virtual void DoAction()
     {
@@ -63,7 +67,7 @@ public class SimpleAction : MonoBehaviour
 
     public void SetButtonInteractable()
     {
-        if (!IsEnoughSpoons() || !IsEqualCondition() || IsMaximum() || IsMinimum())
+        if (!IsEnoughSpoons() || !IsEqualCondition() || IsMaximum() || IsMinimum() || !IsAvailableTime())
             _actionButton.interactable = false;
         else
             _actionButton.interactable = true;
@@ -86,6 +90,23 @@ public class SimpleAction : MonoBehaviour
             hours = Random.Range(_hoursActionCost, _maxHoursActionCost + 1);
 
         _timeManagment.SpendTime(hours, minutes);
+    }
+
+    private bool IsAvailableTime()
+    {
+        if (!_limitedTime)
+            return true;
+
+        if (_minHoursActivation <= _timeManagment.CurrentHours && _maxHoursActivation > _timeManagment.CurrentHours)
+            return true;
+
+        if(_minHoursActivation >= 20 && _maxHoursActivation < 8)
+        {
+            if (_timeManagment.CurrentHours >= _minHoursActivation || _timeManagment.CurrentHours < _maxHoursActivation)
+                return true;
+        }
+
+        return false;
     }
 
     public bool IsMaximum()
