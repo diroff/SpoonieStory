@@ -104,10 +104,14 @@ public class SimpleAction : MonoBehaviour
         if (!_limitedTime)
             return true;
 
-        if (_minHoursActivation <= _timeManagment.CurrentHours && _maxHoursActivation > _timeManagment.CurrentHours)
+        if (_timeManagment.CurrentHours >= _minHoursActivation  && _timeManagment.CurrentHours <= _maxHoursActivation)
         {
-            if(!_limitedMinutes)
-                return true;
+            if (!_limitedMinutes)
+            {
+                if(_timeManagment.CurrentHours >= _minHoursActivation && _timeManagment.CurrentHours < _maxHoursActivation)
+                    return true;
+            }
+                
             else
             {
                 if(_minHoursActivation == _timeManagment.CurrentHours)
