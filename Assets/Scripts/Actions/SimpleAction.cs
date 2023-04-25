@@ -35,6 +35,9 @@ public class SimpleAction : MonoBehaviour
     [SerializeField] private bool _limitedTime = false;
     [SerializeField] private int _minHoursActivation;
     [SerializeField] private int _maxHoursActivation;
+    [SerializeField] private bool _limitedMinutes = false;
+    [SerializeField] private int _minMinutesActivation;
+    [SerializeField] private int _maxMinutesActivation;
 
     protected int _hoursBeforeAction;
     protected int _hoursSpent;
@@ -102,7 +105,30 @@ public class SimpleAction : MonoBehaviour
             return true;
 
         if (_minHoursActivation <= _timeManagment.CurrentHours && _maxHoursActivation > _timeManagment.CurrentHours)
-            return true;
+        {
+            if(!_limitedMinutes)
+                return true;
+            else
+            {
+                if(_minHoursActivation == _timeManagment.CurrentHours)
+                {
+                    if (_minMinutesActivation < _timeManagment.CurrentMinutes)
+                        return true;
+                    else
+                        return false;
+                }
+
+                if(_maxHoursActivation == _timeManagment.CurrentHours)
+                {
+                    if (_maxMinutesActivation > _timeManagment.CurrentMinutes)
+                        return true;
+                    else
+                        return false;
+                }
+
+                return true;
+            }
+        }
 
         if(_minHoursActivation >= 20 && _maxHoursActivation < 8)
         {

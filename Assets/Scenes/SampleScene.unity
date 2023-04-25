@@ -832,6 +832,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
   _dishes: {fileID: 1732207039}
   _food: {fileID: 2083791916}
   _dishesCost: 1
@@ -922,6 +925,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &84839589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1205,6 +1211,9 @@ MonoBehaviour:
   _limitedTime: 1
   _minHoursActivation: 6
   _maxHoursActivation: 20
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
   _sleepEvent: {fileID: 1318496060}
 --- !u!1 &107893036
 GameObject:
@@ -2617,6 +2626,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &287799741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3075,6 +3087,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &336726845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3296,6 +3311,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &381453932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3990,6 +4008,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &455028501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4483,6 +4504,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &505323537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,6 +4769,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
   _dishes: {fileID: 1732207039}
   _food: {fileID: 2083791916}
   _dishesCost: 1
@@ -4917,6 +4944,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
   _dishes: {fileID: 1732207039}
   _food: {fileID: 2083791916}
   _dishesCost: -2
@@ -5349,6 +5379,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &581280617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5517,6 +5550,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &623764478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6143,6 +6179,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &708261976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7030,6 +7069,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &857572196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7729,6 +7771,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &951314021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7962,6 +8007,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &968461768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9123,6 +9171,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &1104819756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10345,6 +10396,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
   _dishes: {fileID: 1732207039}
   _food: {fileID: 2083791916}
   _dishesCost: 3
@@ -12060,6 +12114,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &1429657097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12322,6 +12379,9 @@ MonoBehaviour:
   _limitedTime: 1
   _minHoursActivation: 20
   _maxHoursActivation: 6
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
   _sleepEvent: {fileID: 1318496060}
 --- !u!1 &1499493419
 GameObject:
@@ -12397,6 +12457,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &1499493422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12699,6 +12762,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &1534262185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13515,6 +13581,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &1691802753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13999,6 +14068,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
 --- !u!114 &1741855801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14607,6 +14679,9 @@ MonoBehaviour:
   _limitedTime: 0
   _minHoursActivation: 0
   _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
   _dishes: {fileID: 1732207039}
   _food: {fileID: 2083791916}
   _dishesCost: 2
