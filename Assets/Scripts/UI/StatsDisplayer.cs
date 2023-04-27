@@ -4,7 +4,7 @@ using UnityEngine;
 public class StatsDisplayer : MonoBehaviour
 {
     [SerializeField] private Parameter _parameter;
-    [SerializeField] private TextMeshProUGUI _parameterText;
+    [SerializeField] protected TextMeshProUGUI _parameterText;
 
     private void OnEnable()
     {
@@ -17,8 +17,9 @@ public class StatsDisplayer : MonoBehaviour
         _parameter.ValueChanged -= DisplayParameterValue;
     }
 
-    private void DisplayParameterValue(int currentValue, int maxValue)
+    protected virtual void DisplayParameterValue(int currentValue, int maxValue)
     {
+        _parameterText.text = "";
         _parameterText.text = _parameter.CurrentValue + "/" + _parameter.MaxValue;
     }
 }

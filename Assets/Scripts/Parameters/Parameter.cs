@@ -6,10 +6,10 @@ using UnityEngine.Events;
 public class Parameter : MonoBehaviour
 {
     [SerializeField] private int _startValue;
-    [SerializeField] private int _minValue;
+    [SerializeField] protected int _minValue;
     [SerializeField] private int _maxValue;
 
-    private int _currentValue;
+    protected int _currentValue;
 
     public int StartValue => _startValue;
     public int CurrentValue => _currentValue;
@@ -39,7 +39,7 @@ public class Parameter : MonoBehaviour
         ValueChanged?.Invoke(_currentValue, _maxValue);
     }
 
-    public void ReduceValue(int count)
+    public virtual void ReduceValue(int count)
     {
         if (IsMinimum())
             return;

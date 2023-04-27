@@ -8,6 +8,8 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private int _startHours;
     [SerializeField] private int _startMinutes;
 
+    [SerializeField] private Grade _grade;
+
     private int _currentDays;
     private int _currentHours;
     private int _currentMinutes;
@@ -74,6 +76,7 @@ public class TimeManagment : MonoBehaviour
 
         _currentWeekDay = _weekDays[_currentWeekDayNumber];
         DayChanged?.Invoke(_currentDays, _weekDays[_currentWeekDayNumber]);
+        _grade.ReduceValue(2);
     }
 
     private bool IsDayChanged() { return _currentHours >= 24 && _previousHour < 24; }
