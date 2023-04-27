@@ -6,6 +6,7 @@ public class StudyController : MonoBehaviour
 {
     [SerializeField] private List<LessonSchedule> _lessonSchedules;
     [SerializeField] private TimeManagment _timeManagment;
+    [SerializeField] private LessonSchedule _waitRoom;
 
     public LessonSchedule CheckSchedule()
     {
@@ -15,32 +16,36 @@ public class StudyController : MonoBehaviour
 
             if (_timeManagment.CurrentHours >= schedule.HoursStarted && _timeManagment.CurrentHours <= schedule.HoursFinished)
             {
-                if (schedule.HoursStarted == _timeManagment.CurrentHours)
+                if(schedule.HoursStarted == schedule.HoursFinished && _timeManagment.CurrentHours == schedule.HoursStarted)
                 {
-                    Debug.Log("Now is first hour");
+                    if (_timeManagment.CurrentMinutes >= schedule.MinutesStarted && _timeManagment.CurrentMinutes < schedule.MinutesFinished)
+                    {
+                        Debug.Log("1 hour and current minutes");
+                        return schedule;
+                    }
+                }
+
+                else  if (schedule.HoursStarted == _timeManagment.CurrentHours)
+                {
                     if (_timeManagment.CurrentMinutes >= schedule.MinutesStarted)
                     {
+                        Debug.Log("First hour and current minute >= started minute:" + _timeManagment.CurrentMinutes + ">=" + schedule.MinutesStarted);
                         return schedule;
                     }
                 }
 
-                if (schedule.HoursFinished == _timeManagment.CurrentHours)
+                else if (schedule.HoursFinished == _timeManagment.CurrentHours)
                 {
-                    Debug.Log("Now is last hour");
                     if (_timeManagment.CurrentMinutes < schedule.MinutesFinished)
                     {
+                        Debug.Log("Last hour and current minute < finished minute" + _timeManagment.CurrentMinutes + "<" + schedule.MinutesFinished);
                         return schedule;
                     }
-                    else
-                        continue;
                 }
-
-                Debug.Log("Now is not first && is not last hour");
-                return schedule;
             }
         }
 
         Debug.Log("No schedule now");
-        return null;
+        return _waitRoom;
     }
 }

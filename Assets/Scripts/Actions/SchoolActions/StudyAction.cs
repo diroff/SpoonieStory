@@ -2,19 +2,20 @@ using UnityEngine;
 
 public class StudyAction : SimpleAction
 {
+    [Header("Study")]
     [SerializeField] private StudyController _studyController;
     [SerializeField] private RoomController _roomController;
+    [Space]
+    [SerializeField] private Grade _grade;
+    [SerializeField] private int _additionalGrade;
 
     public override void DoAction()
     {
         base.DoAction();
+        _grade.AddValue(_additionalGrade);
 
         LessonSchedule schedule = _studyController.CheckSchedule();
-
-        if (schedule != null)
-            _roomController.OpenRoom(schedule.Room);
-        else
-            Debug.Log("Schedule is empty!");
-
+        
+        _roomController.OpenRoom(schedule.Room);
     }
 }
