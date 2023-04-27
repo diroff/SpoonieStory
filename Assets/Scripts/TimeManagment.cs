@@ -9,6 +9,7 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private int _startMinutes;
 
     [SerializeField] private Grade _grade;
+    [SerializeField] private StudyController _studyController;
 
     private int _currentDays;
     private int _currentHours;
@@ -19,6 +20,7 @@ public class TimeManagment : MonoBehaviour
 
     private List<string> _weekDays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
     private string _currentWeekDay;
+    private bool _schoolStarted = true;
 
     public int CurrentDays => _currentDays;
     public int CurrentHours => _currentHours;
@@ -29,6 +31,7 @@ public class TimeManagment : MonoBehaviour
     public UnityAction<int, string> DayChanged;
     public UnityAction<int> HoursChanged;
     public UnityAction<int> MinutesChanged;
+    public UnityEvent SchoolEnded;
 
     private void Start()
     {
@@ -64,6 +67,7 @@ public class TimeManagment : MonoBehaviour
 
         HoursChanged?.Invoke(_currentHours);
         MinutesChanged?.Invoke(_currentMinutes);
+        SchoolEndChecker();
     }
 
     public void SetNextDay()
@@ -77,6 +81,17 @@ public class TimeManagment : MonoBehaviour
         _currentWeekDay = _weekDays[_currentWeekDayNumber];
         DayChanged?.Invoke(_currentDays, _weekDays[_currentWeekDayNumber]);
         _grade.ReduceValue(2);
+        _schoolStarted = true;
+        _studyController.WasInSchool(false);
+    }
+
+    private void SchoolEndChecker()
+    {
+        if(_schoolStarted && _currentHours >= 14 && _currentMinutes >= 40)
+        {
+            _schoolStarted = false;
+            SchoolEnded?.Invoke();
+        }
     }
 
     private bool IsDayChanged() { return _currentHours >= 24 && _previousHour < 24; }

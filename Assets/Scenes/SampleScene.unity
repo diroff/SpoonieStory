@@ -667,7 +667,11 @@ MonoBehaviour:
   _startHours: 8
   _startMinutes: 1
   _grade: {fileID: 38908636}
+  _studyController: {fileID: 280010356}
   CurrentWeekDay: 
+  SchoolEnded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &24715462
 Transform:
   m_ObjectHideFlags: 0
@@ -3782,6 +3786,9 @@ MonoBehaviour:
   - {fileID: 171675007}
   _timeManagment: {fileID: 24715461}
   _waitRoom: {fileID: 718951928}
+  _grade: {fileID: 38908636}
+  _homeWorkReady: 1
+  _wasOnSchool: 0
 --- !u!1 &287799739
 GameObject:
   m_ObjectHideFlags: 0
@@ -5984,7 +5991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomActions:
-  - {fileID: 1429657096}
+  - {fileID: 1429657100}
   - {fileID: 968461767}
 --- !u!1 &447086438
 GameObject:
@@ -12810,6 +12817,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 38908636}
+        m_TargetAssemblyTypeName: Parameter, Assembly-CSharp
+        m_MethodName: AddValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &968461769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19076,7 +19095,7 @@ GameObject:
   - component: {fileID: 1429657099}
   - component: {fileID: 1429657098}
   - component: {fileID: 1429657097}
-  - component: {fileID: 1429657096}
+  - component: {fileID: 1429657100}
   m_Layer: 5
   m_Name: DoHomework
   m_TagString: Untagged
@@ -19105,42 +19124,6 @@ RectTransform:
   m_AnchoredPosition: {x: 485.99527, y: -295.76025}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1429657096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429657094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748803965d9560f4fb6906f318a9ab55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spoons: {fileID: 140252656}
-  _hunger: {fileID: 1690864676}
-  _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 1690864676}
-  _actionSpoonsCost: 2
-  _actionHungerCost: 0
-  _actionHygieneCost: 2
-  _changeValue: -6
-  _hoursActionCost: 1
-  _minutesActionCost: 0
-  _isRandomTime: 0
-  _maxHoursActionCost: 0
-  _maxMinutesActionCost: 0
-  _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 0
-  _disableInMinimum: 1
-  _actions: {fileID: 444055711}
-  _actionButton: {fileID: 1429657097}
-  _limitedTime: 0
-  _minHoursActivation: 0
-  _maxHoursActivation: 0
-  _limitedMinutes: 0
-  _minMinutesActivation: 0
-  _maxMinutesActivation: 0
 --- !u!114 &1429657097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19185,8 +19168,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1429657096}
-        m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
+      - m_Target: {fileID: 1429657100}
+        m_TargetAssemblyTypeName: HomeworkAction, Assembly-CSharp
         m_MethodName: DoAction
         m_Mode: 1
         m_Arguments:
@@ -19235,6 +19218,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429657094}
   m_CullTransparentMesh: 1
+--- !u!114 &1429657100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429657094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b775197764134c248ad23667f327f417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spoons: {fileID: 140252656}
+  _hunger: {fileID: 1690864676}
+  _hygiene: {fileID: 740101156}
+  _variableParameter: {fileID: 1690864676}
+  _actionSpoonsCost: 2
+  _actionHungerCost: 6
+  _actionHygieneCost: 2
+  _changeValue: 0
+  _hoursActionCost: 1
+  _minutesActionCost: 0
+  _isRandomTime: 0
+  _maxHoursActionCost: 0
+  _maxMinutesActionCost: 0
+  _timeManagment: {fileID: 24715461}
+  _disableInMaximum: 1
+  _disableInMinimum: 1
+  _actions: {fileID: 444055711}
+  _actionButton: {fileID: 1429657097}
+  _limitedTime: 0
+  _minHoursActivation: 0
+  _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
+  _studyController: {fileID: 280010356}
 --- !u!1 &1429807853
 GameObject:
   m_ObjectHideFlags: 0
