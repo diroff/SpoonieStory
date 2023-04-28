@@ -12308,8 +12308,8 @@ MonoBehaviour:
   _minHoursActivation: 8
   _maxHoursActivation: 14
   _limitedMinutes: 1
-  _minMinutesActivation: 5
-  _maxMinutesActivation: 30
+  _minMinutesActivation: 30
+  _maxMinutesActivation: 10
   _studyController: {fileID: 280010356}
   _roomController: {fileID: 280010355}
   _grade: {fileID: 38908636}
@@ -22583,6 +22583,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 280010356}
+        m_TargetAssemblyTypeName: StudyController, Assembly-CSharp
+        m_MethodName: WaitNextLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1745470822}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -22675,7 +22687,7 @@ MonoBehaviour:
   _actionHygieneCost: 0
   _changeValue: 0
   _hoursActionCost: 0
-  _minutesActionCost: 10
+  _minutesActionCost: 0
   _isRandomTime: 0
   _maxHoursActionCost: 0
   _maxMinutesActionCost: 0

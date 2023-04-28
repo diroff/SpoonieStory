@@ -70,6 +70,15 @@ public class TimeManagment : MonoBehaviour
         SchoolEndChecker();
     }
 
+    public void SetTime(int hours, int minutes)
+    {
+        _currentHours = hours;
+        _currentMinutes = minutes;
+
+        HoursChanged?.Invoke(_currentHours);
+        MinutesChanged?.Invoke(_currentMinutes);
+    }
+
     public void SetNextDay()
     {
         _currentDays++;

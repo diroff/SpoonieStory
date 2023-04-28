@@ -56,6 +56,24 @@ public class StudyController : MonoBehaviour
         return _waitRoom;
     }
 
+    public void WaitNextLesson()
+    {
+        if (!CheckSchedule() == _waitRoom)
+            return;
+
+        _timeManagment.SpendTime(0, 30);
+
+        var currentLesson = CheckSchedule();
+
+        if(currentLesson == _waitRoom)
+        {
+            _timeManagment.SpendTime(0, 20);
+            currentLesson = CheckSchedule();
+        }
+
+        _timeManagment.SetTime(currentLesson.HoursStarted, currentLesson.MinutesStarted);
+    }
+
     public void DoHomework()
     {
         _homeWorkReady = true;
@@ -68,12 +86,11 @@ public class StudyController : MonoBehaviour
 
     private void SchoolEnded()
     {
-        if (_homeWorkReady)
+        if (_homeWorkReady && _wasOnSchool)
             _grade.AddValue(1);
-        else
+        else if(!_homeWorkReady && _wasOnSchool)
             _grade.ReduceValue(2);
-
-        if (!_wasOnSchool)
+        else
             _grade.ReduceValue(4);
 
         _homeWorkReady = false;
