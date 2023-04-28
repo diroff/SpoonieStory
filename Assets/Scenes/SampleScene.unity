@@ -3785,6 +3785,7 @@ MonoBehaviour:
   - {fileID: 893390558}
   - {fileID: 171675007}
   _timeManagment: {fileID: 24715461}
+  _roomController: {fileID: 280010355}
   _waitRoom: {fileID: 718951928}
   _grade: {fileID: 38908636}
   _homeWorkReady: 1
@@ -12227,6 +12228,18 @@ MonoBehaviour:
       - m_Target: {fileID: 929428764}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 280010356}
+        m_TargetAssemblyTypeName: StudyController, Assembly-CSharp
+        m_MethodName: VisitSchool
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

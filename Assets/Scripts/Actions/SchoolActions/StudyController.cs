@@ -5,12 +5,14 @@ public class StudyController : MonoBehaviour
 {
     [SerializeField] private List<LessonSchedule> _lessonSchedules;
     [SerializeField] private TimeManagment _timeManagment;
+    [SerializeField] private RoomController _roomController;
     [SerializeField] private LessonSchedule _waitRoom;
     [Space]
     [SerializeField] private Grade _grade;
     [SerializeField] private bool _homeWorkReady;
     [SerializeField] private bool _wasOnSchool = false;
 
+    public LessonSchedule WaitRoom => _waitRoom;
     public bool HomeWorkIsReady => _homeWorkReady;
 
     private void OnEnable()
@@ -29,8 +31,6 @@ public class StudyController : MonoBehaviour
 
         foreach (LessonSchedule schedule in _lessonSchedules)
         {
-            Debug.Log("Current lesson starts in " + schedule.HoursStarted + ":" + schedule.MinutesStarted);
-
             if (_timeManagment.CurrentHours >= schedule.HoursStarted && _timeManagment.CurrentHours <= schedule.HoursFinished)
             {
                 if (schedule.HoursStarted == schedule.HoursFinished && _timeManagment.CurrentHours == schedule.HoursStarted)
@@ -72,6 +72,42 @@ public class StudyController : MonoBehaviour
         }
 
         _timeManagment.SetTime(currentLesson.HoursStarted, currentLesson.MinutesStarted);
+    }
+
+    public void VisitSchool()
+    {
+        if (IsLessonStartedLongAgo())
+            _roomController.OpenRoom(_waitRoom.Room);
+        else
+            _roomController.OpenRoom(CheckSchedule().Room);
+    }
+
+    public bool IsLessonStartedLongAgo()
+    {
+        LessonSchedule schedule = CheckSchedule();
+
+        if (schedule.Room == _waitRoom)
+            return true;
+
+        int minutesFromStart = 0;
+
+        if (schedule.HoursStarted == schedule.HoursFinished)
+            minutesFromStart = _timeManagment.CurrentMinutes - schedule.MinutesStarted;
+
+        else if(schedule.HoursStarted < schedule.HoursFinished)
+        {
+            if (schedule.HoursStarted == _timeManagment.CurrentHours)
+                minutesFromStart = _timeManagment.CurrentMinutes - schedule.MinutesStarted;
+            else
+                minutesFromStart = (60 - schedule.MinutesStarted) + _timeManagment.CurrentMinutes;
+        }
+
+        Debug.Log("Time from lesson started:" + minutesFromStart);
+
+        if (minutesFromStart >= 15)
+            return true;
+        else
+            return false;
     }
 
     public void DoHomework()
