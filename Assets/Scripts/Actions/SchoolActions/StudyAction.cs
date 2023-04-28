@@ -3,7 +3,7 @@ using UnityEngine;
 public class StudyAction : SimpleAction
 {
     [Header("Study")]
-    [SerializeField] private StudyController _studyController;
+    [SerializeField] protected StudyController _studyController;
     [SerializeField] private RoomController _roomController;
     [Space]
     [SerializeField] private Grade _grade;

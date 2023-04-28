@@ -12152,7 +12152,7 @@ GameObject:
   - component: {fileID: 929428762}
   - component: {fileID: 929428761}
   - component: {fileID: 929428760}
-  - component: {fileID: 929428764}
+  - component: {fileID: 929428765}
   m_Layer: 5
   m_Name: School
   m_TagString: Untagged
@@ -12225,21 +12225,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 929428764}
-        m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
+      - m_Target: {fileID: 929428765}
+        m_TargetAssemblyTypeName: StudyComing, Assembly-CSharp
         m_MethodName: DoAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 280010356}
-        m_TargetAssemblyTypeName: StudyController, Assembly-CSharp
-        m_MethodName: VisitSchool
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12287,7 +12275,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929428758}
   m_CullTransparentMesh: 1
---- !u!114 &929428764
+--- !u!114 &929428765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12296,13 +12284,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 929428758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ae77094b2a6894baee33e07d2b75c8, type: 3}
+  m_Script: {fileID: 11500000, guid: e259f76eba75cdb468770f50167b9723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spoons: {fileID: 140252656}
   _hunger: {fileID: 1690864676}
   _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 140252656}
+  _variableParameter: {fileID: 1690864676}
   _actionSpoonsCost: 0
   _actionHungerCost: 0
   _actionHygieneCost: 0
@@ -12313,8 +12301,8 @@ MonoBehaviour:
   _maxHoursActionCost: 0
   _maxMinutesActionCost: 0
   _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 1
-  _disableInMinimum: 1
+  _disableInMaximum: 0
+  _disableInMinimum: 0
   _actions: {fileID: 1912424312}
   _actionButton: {fileID: 929428760}
   _limitedTime: 1
@@ -23618,7 +23606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomActions:
-  - {fileID: 929428764}
+  - {fileID: 929428765}
 --- !u!1 &1912653113
 GameObject:
   m_ObjectHideFlags: 0

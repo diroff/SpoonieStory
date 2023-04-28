@@ -122,6 +122,9 @@ public class StudyController : MonoBehaviour
 
     private void SchoolEnded()
     {
+        if (TodayIsWeekend())
+            return;
+
         if (_homeWorkReady && _wasOnSchool)
             _grade.AddValue(1);
         else if(!_homeWorkReady && _wasOnSchool)
@@ -130,5 +133,10 @@ public class StudyController : MonoBehaviour
             _grade.ReduceValue(4);
 
         _homeWorkReady = false;
+    }
+
+    private bool TodayIsWeekend()
+    {
+        return _timeManagment.CurrentWeekDay == "Saturday" || _timeManagment.CurrentWeekDay == "Sunday";
     }
 }

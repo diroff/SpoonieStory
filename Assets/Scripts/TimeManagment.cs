@@ -26,7 +26,7 @@ public class TimeManagment : MonoBehaviour
     public int CurrentHours => _currentHours;
     public int CurrentMinutes => _currentMinutes;
 
-    public string CurrentWeekDay;
+    public string CurrentWeekDay => _currentWeekDay;
 
     public UnityAction<int, string> DayChanged;
     public UnityAction<int> HoursChanged;

@@ -24,7 +24,7 @@ public class SimpleAction : MonoBehaviour
     [SerializeField] private int _maxHoursActionCost;
     [SerializeField] private int _maxMinutesActionCost;
     [Space]
-    [SerializeField] private TimeManagment _timeManagment;
+    [SerializeField] protected TimeManagment _timeManagment;
     [Header("Buttons setting")]
     [SerializeField] private bool _disableInMaximum = true;
     [SerializeField] private bool _disableInMinimum = true;
