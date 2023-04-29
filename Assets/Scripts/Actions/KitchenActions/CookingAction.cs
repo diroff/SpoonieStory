@@ -3,27 +3,31 @@ using UnityEngine;
 public class CookingAction : SimpleAction
 {
     [SerializeField] protected Parameter _dishes;
-    [SerializeField] protected Parameter _food;
 
     [SerializeField] protected int _dishesCost;
-    [SerializeField] protected int _foodCost;
+    [SerializeField] private CookingPanel _cookingPanel;
+
+    protected FoodRecipe _currentRecipe;
 
     public override void DoAction()
     {
+        _currentRecipe = _cookingPanel.CurrentRecipe;
+
         base.DoAction();
-
-        if (_dishesCost > 0)
-            _dishes.ReduceValue(_dishesCost);
-        else if (_dishesCost < 0)
-            _dishes.AddValue(-_dishesCost);
-
-        if (_foodCost > 0)
-            _food.ReduceValue(_foodCost);
-
-        else if (_foodCost < 0)
-            _food.AddValue(-_foodCost);
+        
+        _dishes.ReduceValue(_dishesCost);
+        _currentRecipe.ChangeFoodCount(1);
 
         _actions.CheckActionsState();
+    }
+
+    public void SetCost(FoodRecipe recipe)
+    {
+        _currentRecipe = recipe;
+        _minutesActionCost = _currentRecipe.TimeCooking;
+        _actionHungerCost = _currentRecipe.HungerCost;
+        _actionSpoonsCost = _currentRecipe.SpoonsCost;
+        _actionHungerCost = _currentRecipe.HygieneCost;
     }
 
     protected override bool IsEqualCondition()

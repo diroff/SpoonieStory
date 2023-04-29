@@ -9,16 +9,16 @@ public class SimpleAction : MonoBehaviour
     [SerializeField] private Parameter _hunger;
     [SerializeField] private Parameter _hygiene;
     [Space]
-    [SerializeField] private Parameter _variableParameter;
+    [SerializeField] protected Parameter _variableParameter;
     [Header("Actions cost")]
-    [SerializeField] private int _actionSpoonsCost;
-    [SerializeField] private int _actionHungerCost;
-    [SerializeField] private int _actionHygieneCost;
+    [SerializeField] protected int _actionSpoonsCost;
+    [SerializeField] protected int _actionHungerCost;
+    [SerializeField] protected int _actionHygieneCost;
     [Space]
-    [SerializeField] private int _changeValue;
+    [SerializeField] protected int _changeValue;
     [Header("Time cost")]
     [SerializeField] private int _hoursActionCost;
-    [SerializeField] private int _minutesActionCost;
+    [SerializeField] protected int _minutesActionCost;
     [Space]
     [SerializeField] private bool _isRandomTime = false;
     [SerializeField] private int _maxHoursActionCost;
