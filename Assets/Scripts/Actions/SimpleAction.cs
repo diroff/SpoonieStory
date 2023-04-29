@@ -38,6 +38,8 @@ public class SimpleAction : MonoBehaviour
     [SerializeField] private bool _limitedMinutes = false;
     [SerializeField] private int _minMinutesActivation;
     [SerializeField] private int _maxMinutesActivation;
+    [Space]
+    [SerializeField] private bool _canBeHided = false;
 
     protected int _hoursBeforeAction;
     protected int _hoursSpent;
@@ -71,9 +73,19 @@ public class SimpleAction : MonoBehaviour
     public void SetButtonInteractable()
     {
         if (!IsEnoughSpoons() || !IsEqualCondition() || IsMaximum() || IsMinimum() || !IsAvailableTime())
-            _actionButton.gameObject.SetActive(false);
+        {
+            if (_canBeHided)
+                _actionButton.gameObject.SetActive(false);
+            else
+                _actionButton.interactable = false;
+        }
         else
-            _actionButton.gameObject.SetActive(true);
+        {
+            if (_canBeHided)
+                _actionButton.gameObject.SetActive(true);
+            else
+                _actionButton.interactable = true;
+        }
     }
 
     protected void SpendTime()
