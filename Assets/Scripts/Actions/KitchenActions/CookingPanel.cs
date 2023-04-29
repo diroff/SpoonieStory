@@ -19,6 +19,7 @@ public class CookingPanel : MonoBehaviour
     private FoodRecipe _currentRecipe;
 
     public FoodRecipe CurrentRecipe => _currentRecipe;
+    public List<FoodRecipe> FoodRecipes => _foodRecipes;
 
     private void OnEnable()
     {

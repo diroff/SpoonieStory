@@ -36,6 +36,9 @@ public class EatAction : SimpleAction
 
     protected override bool IsEqualCondition()
     {
+        if (_currentRecipe == null)
+            _currentRecipe = _cookingPanel.FoodRecipes[0];
+
         return _dishes.CurrentValue >= _dishesCost && _currentRecipe.FoodCount > 0;
     }
 }
