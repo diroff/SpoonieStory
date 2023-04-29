@@ -13356,9 +13356,9 @@ MonoBehaviour:
   _hygiene: {fileID: 740101156}
   _variableParameter: {fileID: 1690864676}
   _actionSpoonsCost: 1
-  _actionHungerCost: 0
+  _actionHungerCost: 1
   _actionHygieneCost: 0
-  _changeValue: 1
+  _changeValue: 0
   _hoursActionCost: 0
   _minutesActionCost: 5
   _isRandomTime: 0
