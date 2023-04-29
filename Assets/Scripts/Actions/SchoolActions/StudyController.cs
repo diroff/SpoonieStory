@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StudyController : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class StudyController : MonoBehaviour
 
     public LessonSchedule WaitRoom => _waitRoom;
     public bool HomeWorkIsReady => _homeWorkReady;
+
+    public UnityEvent<bool> HomeworkFinished;
 
     private void OnEnable()
     {
@@ -130,6 +133,7 @@ public class StudyController : MonoBehaviour
     public void DoHomework()
     {
         _homeWorkReady = true;
+        HomeworkFinished?.Invoke(_homeWorkReady);
     }
 
     public void WasInSchool(bool was)
@@ -150,6 +154,9 @@ public class StudyController : MonoBehaviour
             _grade.ReduceValue(4);
 
         _homeWorkReady = false;
+        Debug.Log("School ended!");
+        Debug.Log("Homework status:" + _homeWorkReady);
+        HomeworkFinished?.Invoke(_homeWorkReady);
     }
 
     private bool TodayIsWeekend()
