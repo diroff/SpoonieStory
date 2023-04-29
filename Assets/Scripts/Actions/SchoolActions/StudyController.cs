@@ -7,10 +7,14 @@ public class StudyController : MonoBehaviour
     [SerializeField] private TimeManagment _timeManagment;
     [SerializeField] private RoomController _roomController;
     [SerializeField] private LessonSchedule _waitRoom;
+    [SerializeField] private LessonSchedule _lateRoom;
+
     [Space]
     [SerializeField] private Grade _grade;
     [SerializeField] private bool _homeWorkReady;
     [SerializeField] private bool _wasOnSchool = false;
+
+    private bool _nowIsLesson = false;
 
     public LessonSchedule WaitRoom => _waitRoom;
     public bool HomeWorkIsReady => _homeWorkReady;
@@ -36,23 +40,33 @@ public class StudyController : MonoBehaviour
                 if (schedule.HoursStarted == schedule.HoursFinished && _timeManagment.CurrentHours == schedule.HoursStarted)
                 {
                     if (_timeManagment.CurrentMinutes >= schedule.MinutesStarted && _timeManagment.CurrentMinutes < schedule.MinutesFinished)
+                    {
+                        _nowIsLesson = true;
                         return schedule;
+                    }
                 }
 
                 else if (schedule.HoursStarted == _timeManagment.CurrentHours)
                 {
                     if (_timeManagment.CurrentMinutes >= schedule.MinutesStarted)
+                    {
+                        _nowIsLesson = true;
                         return schedule;
+                    }
                 }
 
                 else if (schedule.HoursFinished == _timeManagment.CurrentHours)
                 {
                     if (_timeManagment.CurrentMinutes < schedule.MinutesFinished)
+                    {
+                        _nowIsLesson = true;
                         return schedule;
+                    }
                 }
             }
         }
 
+        _nowIsLesson = false;
         return _waitRoom;
     }
 
@@ -77,7 +91,10 @@ public class StudyController : MonoBehaviour
     public void VisitSchool()
     {
         if (IsLessonStartedLongAgo())
-            _roomController.OpenRoom(_waitRoom.Room);
+        {
+            _roomController.OpenRoom(_lateRoom.Room);
+            Debug.Log("You are late");
+        }
         else
             _roomController.OpenRoom(CheckSchedule().Room);
     }
@@ -86,8 +103,8 @@ public class StudyController : MonoBehaviour
     {
         LessonSchedule schedule = CheckSchedule();
 
-        if (schedule.Room == _waitRoom)
-            return true;
+        if (!_nowIsLesson)
+            return false;
 
         int minutesFromStart = 0;
 
