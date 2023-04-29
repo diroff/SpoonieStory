@@ -21,6 +21,11 @@ public class CookingPanel : MonoBehaviour
     public FoodRecipe CurrentRecipe => _currentRecipe;
     public List<FoodRecipe> FoodRecipes => _foodRecipes;
 
+    private void Awake()
+    {
+        SetRecipe(_foodRecipes[0]);
+    }
+
     private void OnEnable()
     {
         SetRecipe(_foodRecipes[0]);
@@ -47,7 +52,7 @@ public class CookingPanel : MonoBehaviour
         _actions.CheckActionsState();
     }
 
-    private void UpdateFoodCount(int count)
+    public void UpdateFoodCount(int count)
     {
         _count.text = "Count:" + count;
     }

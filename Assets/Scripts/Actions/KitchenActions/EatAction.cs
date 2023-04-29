@@ -23,6 +23,7 @@ public class EatAction : SimpleAction
         _dishes.ReduceValue(_dishesCost);
         _currentRecipe.ChangeFoodCount(-1);
 
+        _cookingPanel.UpdateFoodCount(_currentRecipe.FoodCount);
         _actions.CheckActionsState();
     }
 
@@ -37,7 +38,7 @@ public class EatAction : SimpleAction
     protected override bool IsEqualCondition()
     {
         if (_currentRecipe == null)
-            _currentRecipe = _cookingPanel.FoodRecipes[0];
+            return false;
 
         return _dishes.CurrentValue >= _dishesCost && _currentRecipe.FoodCount > 0;
     }

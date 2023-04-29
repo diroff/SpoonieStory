@@ -18,6 +18,7 @@ public class CookingAction : SimpleAction
         _dishes.ReduceValue(_dishesCost);
         _currentRecipe.ChangeFoodCount(1);
 
+        _cookingPanel.UpdateFoodCount(_currentRecipe.FoodCount);
         _actions.CheckActionsState();
     }
 
