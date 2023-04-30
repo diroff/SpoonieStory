@@ -20,6 +20,7 @@ public class CookingAction : SimpleAction
 
         _cookingPanel.UpdateFoodCount(_currentRecipe.FoodCount);
         _actions.CheckActionsState();
+        _cookingPanel.SetRecipe(_cookingPanel.CurrentRecipe);
     }
 
     public void SetCost(FoodRecipe recipe)
