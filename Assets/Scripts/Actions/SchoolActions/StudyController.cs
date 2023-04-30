@@ -14,6 +14,9 @@ public class StudyController : MonoBehaviour
     [SerializeField] private Grade _grade;
     [SerializeField] private bool _homeWorkReady;
     [SerializeField] private bool _wasOnSchool = false;
+    [Header("Alerts")]
+    [SerializeField] private Alert _lateAlert;
+    [SerializeField] private Alert _classesOverAlert;
 
     private bool _nowIsLesson = false;
 
@@ -96,7 +99,7 @@ public class StudyController : MonoBehaviour
         if (IsLessonStartedLongAgo())
         {
             _roomController.OpenRoom(_lateRoom.Room);
-            Debug.Log("You are late");
+            AlertController.Alerts.ShowAlert(_lateAlert);
         }
         else
             _roomController.OpenRoom(CheckSchedule().Room);
@@ -154,8 +157,10 @@ public class StudyController : MonoBehaviour
             _grade.ReduceValue(4);
 
         _homeWorkReady = false;
-        Debug.Log("School ended!");
-        Debug.Log("Homework status:" + _homeWorkReady);
+
+        if (_wasOnSchool)
+            AlertController.Alerts.ShowAlert(_classesOverAlert);
+
         HomeworkFinished?.Invoke(_homeWorkReady);
     }
 
