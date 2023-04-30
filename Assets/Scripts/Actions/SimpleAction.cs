@@ -59,6 +59,7 @@ public class SimpleAction : MonoBehaviour
         _hunger.ReduceValue(_actionHungerCost);
         _hygiene.ReduceValue(_actionHygieneCost);
         SpendTime();
+        AlertController.Alerts.CheckParamsAlerts();
         _actions.CheckActionsState();
     }
 

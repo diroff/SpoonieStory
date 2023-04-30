@@ -14,4 +14,15 @@ public class Alert : MonoBehaviour
         Flashing,
         Sticky,
     }
+
+    public bool CanBeHided(bool condition)
+    {
+        if (_type == AlertType.Flashing)
+            return true;
+
+        if (condition)
+            return true;
+        else
+            return false;
+    }
 }

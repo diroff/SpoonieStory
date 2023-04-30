@@ -26943,6 +26943,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3435fadb6b1929e4ca94b1ba86825a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpoonsLessFive: {fileID: 4423418253666925652, guid: 45c06f57bf9120b4990d1ec561dbdfb2, type: 3}
+  SpoonsLessTwo: {fileID: 4423418253666925652, guid: b6c02d4065052184e8d4fd69d1cc3ca6, type: 3}
+  HungerLessThirty: {fileID: 4423418253666925652, guid: 21fc6b16d74d10741b2535fd533059e6, type: 3}
+  HungerLessTen: {fileID: 4423418253666925652, guid: 793e8eb92f72e2f4baa07a58709e7a60, type: 3}
+  HygieneLessThirty: {fileID: 4423418253666925652, guid: 0da7a655bad36f3438f1a7b92d682647, type: 3}
+  HygieneLessTen: {fileID: 4423418253666925652, guid: 4c9efaa1a258ea749a4cbfce132923d0, type: 3}
+  _spoons: {fileID: 140252656}
+  _hunger: {fileID: 1690864676}
+  _hygiene: {fileID: 740101156}
 --- !u!1 &1775316484
 GameObject:
   m_ObjectHideFlags: 0

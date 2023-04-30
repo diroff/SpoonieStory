@@ -20,6 +20,7 @@ public class RoomController : MonoBehaviour
         _nextRoom.SetPreviousRoom(_currentRoom);
         _nextRoom.SetRoomState(true);
         _currentRoom = _nextRoom;
+        AlertController.Alerts.CheckParamsAlerts();
     }
 
     public void CloseRoom()
@@ -28,5 +29,6 @@ public class RoomController : MonoBehaviour
         _nextRoom = _currentRoom.PreviousRoom;
         _nextRoom.SetRoomState(true);
         _currentRoom = _nextRoom;
+        AlertController.Alerts.CheckParamsAlerts();
     }
 }
