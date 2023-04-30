@@ -20,7 +20,6 @@ public class RoomController : MonoBehaviour
         _nextRoom.SetPreviousRoom(_currentRoom);
         _nextRoom.SetRoomState(true);
         _currentRoom = _nextRoom;
-        AlertController.Alerts.RemoveFlashingAlerts();
     }
 
     public void CloseRoom()

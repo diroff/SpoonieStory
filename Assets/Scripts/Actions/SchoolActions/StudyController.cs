@@ -17,6 +17,10 @@ public class StudyController : MonoBehaviour
     [Header("Alerts")]
     [SerializeField] private Alert _lateAlert;
     [SerializeField] private Alert _classesOverAlert;
+    [SerializeField] private Alert _skippingLessonsAlert;
+    [SerializeField] private Alert _homeworkDoneAlert;
+    [SerializeField] private Alert _homeworkUnDoneAlert;
+    [SerializeField] private Alert _newHomeworkAlert;
 
     private bool _nowIsLesson = false;
 
@@ -150,11 +154,22 @@ public class StudyController : MonoBehaviour
             return;
 
         if (_homeWorkReady && _wasOnSchool)
+        {
             _grade.AddValue(1);
+            Debug.Log("Done");
+            AlertController.Alerts.ShowAlert(_homeworkDoneAlert);
+        }
         else if(!_homeWorkReady && _wasOnSchool)
+        {
+            AlertController.Alerts.ShowAlert(_homeworkUnDoneAlert);
+            Debug.Log("Undone");
             _grade.ReduceValue(2);
+        }
         else
+        {
+            AlertController.Alerts.ShowAlert(_skippingLessonsAlert);
             _grade.ReduceValue(4);
+        }
 
         _homeWorkReady = false;
 
@@ -162,6 +177,7 @@ public class StudyController : MonoBehaviour
             AlertController.Alerts.ShowAlert(_classesOverAlert);
 
         HomeworkFinished?.Invoke(_homeWorkReady);
+        AlertController.Alerts.ShowAlert(_newHomeworkAlert);
     }
 
     private bool TodayIsWeekend()

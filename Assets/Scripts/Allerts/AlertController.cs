@@ -29,6 +29,8 @@ public class AlertController : MonoBehaviour
             {
                 Destroy(_alerts[i].gameObject);
                 _alerts.RemoveAt(i);
+                RemoveFlashingAlerts();
+                return;
             }
         }
     }

@@ -96,8 +96,14 @@ public class TimeManagment : MonoBehaviour
 
     private void SchoolEndChecker()
     {
-        if(_schoolStarted && _currentHours >= 14 && _currentMinutes >= 40)
+        if(_schoolStarted && _currentHours >= 14)
         {
+            if(_currentHours == 14)
+            {
+                if (_currentMinutes < 40)
+                    return;
+            }
+
             _schoolStarted = false;
             Debug.Log("School ended");
             SchoolEnded?.Invoke();

@@ -1977,6 +1977,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 87920622}
         m_TargetAssemblyTypeName: SleepAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -2837,6 +2849,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: CloseRoom
@@ -3826,6 +3850,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010356}
         m_TargetAssemblyTypeName: StudyController, Assembly-CSharp
         m_MethodName: WaitNextLesson
@@ -4737,6 +4773,10 @@ MonoBehaviour:
   _wasOnSchool: 0
   _lateAlert: {fileID: 4423418253666925652, guid: af90415441c08db4c97cd0672763ce7b, type: 3}
   _classesOverAlert: {fileID: 4423418253666925652, guid: 58de4b0034aca474c94f4b7d54456707, type: 3}
+  _skippingLessonsAlert: {fileID: 4423418253666925652, guid: ef8688e676f083c4dae9d6a1ac3f74c7, type: 3}
+  _homeworkDoneAlert: {fileID: 4423418253666925652, guid: a378936400811e543874671a56acb897, type: 3}
+  _homeworkUnDoneAlert: {fileID: 4423418253666925652, guid: f9e1e3a78a9f0ef4ba64c41bb394254c, type: 3}
+  _newHomeworkAlert: {fileID: 4423418253666925652, guid: 2056324c0c2aab5408401889dd20bf46, type: 3}
   HomeworkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -5000,6 +5040,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: OpenRoom
@@ -6465,6 +6517,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 402584018}
         m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -9136,6 +9200,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 574517971}
         m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -9320,6 +9396,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 581280616}
         m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -14165,6 +14253,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 929428765}
         m_TargetAssemblyTypeName: StudyComing, Assembly-CSharp
         m_MethodName: DoAction
@@ -14340,6 +14440,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: OpenRoom
@@ -14512,6 +14624,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 951314020}
         m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -16505,6 +16629,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: CloseRoom
@@ -18863,6 +18999,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1235965128}
         m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -19925,6 +20073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spoons: {fileID: 140252656}
+  _insomniaAlert: {fileID: 4423418253666925652, guid: 76e669dbc6c3bdb4dadad04c04c70211, type: 3}
+  _nightmareAlert: {fileID: 4423418253666925652, guid: 6f1789966a5f67541a48fbd826f53ce5, type: 3}
+  _neutralAlert: {fileID: 4423418253666925652, guid: 58baa13988272fc47a3017625030e247, type: 3}
+  _refreshAlert: {fileID: 4423418253666925652, guid: 61b9b7e3e2d89fe46abee03cf27c58e1, type: 3}
 --- !u!1 &1322826487
 GameObject:
   m_ObjectHideFlags: 0
@@ -22784,6 +22936,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1483289441}
         m_TargetAssemblyTypeName: SleepAction, Assembly-CSharp
         m_MethodName: DoAction
@@ -23263,6 +23427,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: OpenRoom
@@ -25045,6 +25221,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: CloseRoom
@@ -25890,6 +26078,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: OpenRoom
@@ -26493,6 +26693,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010356}
         m_TargetAssemblyTypeName: StudyController, Assembly-CSharp
         m_MethodName: WaitNextLesson
@@ -29033,6 +29245,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: CloseRoom
@@ -29462,6 +29686,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1755367653}
+        m_TargetAssemblyTypeName: AlertController, Assembly-CSharp
+        m_MethodName: RemoveFlashingAlerts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 280010355}
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: OpenRoom
@@ -29623,7 +29859,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lesson 5
+  m_text: Lesson 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
