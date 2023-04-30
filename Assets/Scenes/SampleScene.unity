@@ -9263,7 +9263,7 @@ MonoBehaviour:
   _maxHoursActionCost: 0
   _maxMinutesActionCost: 0
   _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 1
+  _disableInMaximum: 0
   _disableInMinimum: 0
   _actions: {fileID: 1280389676}
   _actionButton: {fileID: 581280617}
