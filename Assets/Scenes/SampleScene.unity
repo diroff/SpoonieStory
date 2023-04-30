@@ -556,6 +556,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1786603978}
   - {fileID: 983375596}
   - {fileID: 280010352}
   - {fileID: 1517744155}
@@ -1621,6 +1622,7 @@ MonoBehaviour:
   SpoonsCost: 1
   HungerCost: 3
   HygieneCost: 1
+  RecipeButton: {fileID: 0}
   CountChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2518,6 +2520,7 @@ MonoBehaviour:
   SpoonsCost: 1
   HungerCost: 3
   HygieneCost: 1
+  RecipeButton: {fileID: 0}
   CountChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4645,12 +4648,12 @@ RectTransform:
   - {fileID: 619260299}
   - {fileID: 4998261}
   m_Father: {fileID: 11446792}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 103.140015, y: 13.619995}
-  m_SizeDelta: {x: -869.68, y: -107.55}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1024, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280010353
 MonoBehaviour:
@@ -10079,6 +10082,7 @@ MonoBehaviour:
   SpoonsCost: 2
   HungerCost: 4
   HygieneCost: 2
+  RecipeButton: {fileID: 0}
   CountChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10805,8 +10809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -147.86002, y: 0}
-  m_SizeDelta: {x: -295.72, y: 0}
+  m_AnchoredPosition: {x: -136.42001, y: 0}
+  m_SizeDelta: {x: -272.83, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681254766
 MonoBehaviour:
@@ -11070,12 +11074,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 983375596}
-  m_RootOrder: 4
+  m_Father: {fileID: 1786603978}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.999985, y: -120}
+  m_AnchoredPosition: {x: 105.66, y: 111.999985}
   m_SizeDelta: {x: 45, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701607428
@@ -11808,13 +11812,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 983375596}
-  m_RootOrder: 7
+  m_Father: {fileID: 1786603978}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63.56, y: -120}
-  m_SizeDelta: {x: 296.26, y: 50}
+  m_AnchoredPosition: {x: 0.0012186, y: 111.999985}
+  m_SizeDelta: {x: 396.31, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750350987
 MonoBehaviour:
@@ -14048,19 +14052,19 @@ MonoBehaviour:
   _spoons: {fileID: 140252656}
   _hunger: {fileID: 1690864676}
   _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 1690864676}
+  _variableParameter: {fileID: 140252656}
   _actionSpoonsCost: 0
-  _actionHungerCost: 0
+  _actionHungerCost: -20
   _actionHygieneCost: 1
-  _changeValue: 20
+  _changeValue: 0
   _hoursActionCost: 0
   _minutesActionCost: 20
   _isRandomTime: 0
   _maxHoursActionCost: 0
   _maxMinutesActionCost: 0
   _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 1
-  _disableInMinimum: 0
+  _disableInMaximum: 0
+  _disableInMinimum: 1
   _actions: {fileID: 715704641}
   _actionButton: {fileID: 925763527}
   _limitedTime: 0
@@ -15110,18 +15114,13 @@ RectTransform:
   - {fileID: 1226713908}
   - {fileID: 1143588254}
   - {fileID: 1316033581}
-  - {fileID: 701607427}
-  - {fileID: 1160816378}
-  - {fileID: 1034781319}
-  - {fileID: 750350986}
-  - {fileID: 1460146396}
   m_Father: {fileID: 11446792}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: 249.99998}
-  m_SizeDelta: {x: 450, y: 500}
+  m_AnchoredPosition: {x: 224, y: 146.58}
+  m_SizeDelta: {x: 422.55, y: 686.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983375597
 MonoBehaviour:
@@ -15136,7 +15135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15868,12 +15867,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 983375596}
-  m_RootOrder: 6
+  m_Father: {fileID: 1786603978}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 185.00002, y: -120}
+  m_AnchoredPosition: {x: 175.66, y: 111.999985}
   m_SizeDelta: {x: 45, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034781320
@@ -17466,7 +17465,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133578912}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17476,7 +17475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 60.00002}
+  m_AnchoredPosition: {x: -99.585, y: 224.99997}
   m_SizeDelta: {x: 223.38, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133578914
@@ -17579,6 +17578,7 @@ MonoBehaviour:
   SpoonsCost: 2
   HungerCost: 4
   HygieneCost: 2
+  RecipeButton: {fileID: 0}
   CountChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17712,7 +17712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 60}
+  m_AnchoredPosition: {x: 115, y: 224.99995}
   m_SizeDelta: {x: 196.61, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143588255
@@ -18029,12 +18029,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 983375596}
-  m_RootOrder: 5
+  m_Father: {fileID: 1786603978}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -120}
+  m_AnchoredPosition: {x: 140.66, y: 112}
   m_SizeDelta: {x: 25, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160816379
@@ -18462,7 +18462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Basic cooking
+  m_text: Cooking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18721,7 +18721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 150}
+  m_AnchoredPosition: {x: 112.97, y: 318.42}
   m_SizeDelta: {x: 196.61, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226713909
@@ -19840,7 +19840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: -30}
+  m_AnchoredPosition: {x: 115, y: 134.99995}
   m_SizeDelta: {x: 196.61, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316033582
@@ -20079,6 +20079,7 @@ MonoBehaviour:
   SpoonsCost: 1
   HungerCost: 3
   HygieneCost: 1
+  RecipeButton: {fileID: 0}
   CountChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22673,13 +22674,13 @@ RectTransform:
   m_Children:
   - {fileID: 1602245405}
   - {fileID: 681254765}
-  m_Father: {fileID: 983375596}
-  m_RootOrder: 8
+  m_Father: {fileID: 1786603978}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.0949, y: -185.9}
-  m_SizeDelta: {x: 419.19, y: 50}
+  m_AnchoredPosition: {x: 0.00000095367, y: -20.420029}
+  m_SizeDelta: {x: 396.31, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460146397
 MonoBehaviour:
@@ -23518,7 +23519,7 @@ RectTransform:
   - {fileID: 164101212}
   - {fileID: 9213058}
   m_Father: {fileID: 11446792}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -26763,7 +26764,7 @@ MonoBehaviour:
   _spoons: {fileID: 140252656}
   _hunger: {fileID: 1690864676}
   _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 1690864676}
+  _variableParameter: {fileID: 140252656}
   _actionSpoonsCost: 0
   _actionHungerCost: 0
   _actionHygieneCost: 0
@@ -26774,8 +26775,8 @@ MonoBehaviour:
   _maxHoursActionCost: 0
   _maxMinutesActionCost: 0
   _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 1
-  _disableInMinimum: 0
+  _disableInMaximum: 0
+  _disableInMinimum: 1
   _actions: {fileID: 826500729}
   _actionButton: {fileID: 1775316486}
   _limitedTime: 0
@@ -26813,7 +26814,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785991774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -26863,6 +26864,87 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785991774}
+  m_CullTransparentMesh: 1
+--- !u!1 &1786603977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786603978}
+  - component: {fileID: 1786603980}
+  - component: {fileID: 1786603979}
+  m_Layer: 5
+  m_Name: Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1786603978
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786603977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 701607427}
+  - {fileID: 1160816378}
+  - {fileID: 1034781319}
+  - {fileID: 750350986}
+  - {fileID: 1460146396}
+  m_Father: {fileID: 11446792}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1695.8812, y: 353.89}
+  m_SizeDelta: {x: 396.31, y: 272.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1786603979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786603977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1786603980
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786603977}
   m_CullTransparentMesh: 1
 --- !u!1 &1794227683
 GameObject:
@@ -29081,6 +29163,7 @@ MonoBehaviour:
   SpoonsCost: 2
   HungerCost: 4
   HygieneCost: 2
+  RecipeButton: {fileID: 0}
   CountChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29768,6 +29851,7 @@ MonoBehaviour:
   SpoonsCost: 1
   HungerCost: 3
   HygieneCost: 1
+  RecipeButton: {fileID: 0}
   CountChanged:
     m_PersistentCalls:
       m_Calls: []

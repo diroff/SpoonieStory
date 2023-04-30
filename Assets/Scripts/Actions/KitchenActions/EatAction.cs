@@ -32,7 +32,8 @@ public class EatAction : SimpleAction
     {
         _currentRecipe = recipe;
         _minutesActionCost = _currentRecipe.TimeEating;
-        _changeValue = _currentRecipe.Hunger;
+        _actionHungerCost = -_currentRecipe.Hunger;
+
         _actionHygieneCost = _currentRecipe.HygieneCost;
     }
 
