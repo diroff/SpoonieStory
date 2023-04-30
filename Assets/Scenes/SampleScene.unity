@@ -26949,9 +26949,11 @@ MonoBehaviour:
   HungerLessTen: {fileID: 4423418253666925652, guid: 793e8eb92f72e2f4baa07a58709e7a60, type: 3}
   HygieneLessThirty: {fileID: 4423418253666925652, guid: 0da7a655bad36f3438f1a7b92d682647, type: 3}
   HygieneLessTen: {fileID: 4423418253666925652, guid: 4c9efaa1a258ea749a4cbfce132923d0, type: 3}
+  GradeIsLow: {fileID: 4423418253666925652, guid: 836975148707e7845a564b575cc91c96, type: 3}
   _spoons: {fileID: 140252656}
   _hunger: {fileID: 1690864676}
   _hygiene: {fileID: 740101156}
+  _grades: {fileID: 38908636}
 --- !u!1 &1775316484
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,11 +12,14 @@ public class AlertController : MonoBehaviour
     public Alert HygieneLessThirty;
     public Alert HygieneLessTen;
 
+    public Alert GradeIsLow;
+
     public static AlertController Alerts;
 
     [SerializeField] private Parameter _spoons;
     [SerializeField] private Parameter _hunger;
     [SerializeField] private Parameter _hygiene;
+    [SerializeField] private Parameter _grades;
 
     private void Awake()
     {
@@ -83,5 +86,8 @@ public class AlertController : MonoBehaviour
             ShowAlert(HygieneLessThirty);
         else if (_hygiene.CurrentValue <= 10)
             ShowAlert(HygieneLessTen);
+
+        if (_grades.CurrentValue <= 54)
+            ShowAlert(GradeIsLow);
     }
 }
