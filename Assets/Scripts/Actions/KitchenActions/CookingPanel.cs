@@ -50,6 +50,8 @@ public class CookingPanel : MonoBehaviour
         _cookingAction.SetCost(_currentRecipe);
         _eatAction.SetCost(_currentRecipe);
         _actions.CheckActionsState();
+        _cookingAction.SetButtonText();
+        _eatAction.SetButtonText();
         SetButtonsColor();
     }
 

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class SimpleAction : MonoBehaviour
 {
     [Header("Player parameters")]
-    [SerializeField] private Parameter _spoons;
-    [SerializeField] private Parameter _hunger;
-    [SerializeField] private Parameter _hygiene;
+    [SerializeField] protected Parameter _spoons;
+    [SerializeField] protected Parameter _hunger;
+    [SerializeField] protected Parameter _hygiene;
     [Space]
     [SerializeField] protected Parameter _variableParameter;
     [Header("Actions cost")]

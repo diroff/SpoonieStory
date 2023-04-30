@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EatAction : SimpleAction
 {
@@ -6,6 +8,9 @@ public class EatAction : SimpleAction
 
     [SerializeField] protected int _dishesCost;
     [SerializeField] private CookingPanel _cookingPanel;
+
+    [SerializeField] private Button _button;
+    [SerializeField] private TextMeshProUGUI _buttonText;
 
     protected FoodRecipe _currentRecipe;
 
@@ -26,6 +31,25 @@ public class EatAction : SimpleAction
         _cookingPanel.UpdateFoodCount(_currentRecipe.FoodCount);
         _actions.CheckActionsState();
         _cookingPanel.SetRecipe(_cookingPanel.CurrentRecipe);
+    }
+
+
+    public void SetButtonText()
+    {
+        if (_button.interactable == true)
+            _buttonText.text = "Eat";
+
+        else
+        {
+            if(_currentRecipe.FoodCount == 0)
+                _buttonText.text = "Nothing to eat";
+            if (_dishes.CurrentValue == 0)
+                _buttonText.text = "Everything is dirty";
+
+            if (_spoons.CurrentValue == 0)
+                _buttonText.text = "Too tired";
+        }
+
     }
 
     public void SetCost(FoodRecipe recipe)

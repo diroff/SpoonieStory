@@ -8859,6 +8859,8 @@ MonoBehaviour:
   _canBeHided: 0
   _dishes: {fileID: 1732207039}
   _dishesCost: 2
+  _button: {fileID: 513951312}
+  _buttonText: {fileID: 278173544}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -18786,6 +18788,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 513951315}
+        m_TargetAssemblyTypeName: DishesAction, Assembly-CSharp
+        m_MethodName: SetButtonText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1220978572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22798,6 +22812,8 @@ MonoBehaviour:
   _dishes: {fileID: 1732207039}
   _dishesCost: 1
   _cookingPanel: {fileID: 80844197}
+  _button: {fileID: 1448616882}
+  _buttonText: {fileID: 1147031387}
 --- !u!1 &1460146395
 GameObject:
   m_ObjectHideFlags: 0
@@ -27129,6 +27145,8 @@ MonoBehaviour:
   _dishes: {fileID: 1732207039}
   _dishesCost: 1
   _cookingPanel: {fileID: 80844197}
+  _button: {fileID: 1775316486}
+  _buttonText: {fileID: 1421609549}
 --- !u!1 &1785991774
 GameObject:
   m_ObjectHideFlags: 0
