@@ -10,6 +10,7 @@ public class TimeManagment : MonoBehaviour
 
     [SerializeField] private Grade _grade;
     [SerializeField] private StudyController _studyController;
+    [SerializeField] private TaskManager _taskManager;
 
     private int _currentDays;
     private int _currentHours;
@@ -68,6 +69,7 @@ public class TimeManagment : MonoBehaviour
         HoursChanged?.Invoke(_currentHours);
         MinutesChanged?.Invoke(_currentMinutes);
         SchoolEndChecker();
+        OpenTaskManager();
     }
 
     public void SetTime(int hours, int minutes)
@@ -92,6 +94,7 @@ public class TimeManagment : MonoBehaviour
         _grade.ReduceValue(2);
         _schoolStarted = true;
         _studyController.WasInSchool(false);
+        TaskManagerSetter();
     }
 
     private void SchoolEndChecker()
@@ -107,6 +110,21 @@ public class TimeManagment : MonoBehaviour
             _schoolStarted = false;
             Debug.Log("School ended");
             SchoolEnded?.Invoke();
+        }
+    }
+
+    private void TaskManagerSetter()
+    {
+        _taskManager.OpenedFirstTime = true;
+        _taskManager.CheckTasks();
+        _taskManager.CheckFailedTasksCount();
+    }
+
+    private void OpenTaskManager()
+    {
+        if (_currentHours >= 0 && _taskManager.OpenedFirstTime)
+        {
+            _taskManager.OpenPanel();
         }
     }
 

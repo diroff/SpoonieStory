@@ -14,12 +14,20 @@ public class AlertController : MonoBehaviour
 
     public Alert GradeIsLow;
 
+    public Alert UnfinishedTask;
+    public Alert UnfinishedTaskLow;
+    public Alert UnfinishedTaskHigh;
+    public Alert TasksMoreSpoons;
+
     public static AlertController Alerts;
 
     [SerializeField] private Parameter _spoons;
     [SerializeField] private Parameter _hunger;
     [SerializeField] private Parameter _hygiene;
     [SerializeField] private Parameter _grades;
+
+    [SerializeField] private TaskManager _taskManager;
+    [SerializeField] private TimeManagment _timeManagment;
 
     private void Awake()
     {
@@ -89,5 +97,16 @@ public class AlertController : MonoBehaviour
 
         if (_grades.CurrentValue <= 54)
             ShowAlert(GradeIsLow);
+
+        if (_taskManager.YesterdayFailedTasks >= 1 && _taskManager.YesterdayFailedTasks < 4)
+            ShowAlert(UnfinishedTaskLow);
+        else if (_taskManager.YesterdayFailedTasks >= 4)
+            ShowAlert(UnfinishedTaskHigh);
+
+        if (_taskManager.GetCountUnfinishedTasks() > _spoons.CurrentValue)
+            ShowAlert(TasksMoreSpoons);
+
+        if (_taskManager.GetCountUnfinishedTasks() > 0 && _timeManagment.CurrentHours >= 18)
+            ShowAlert(UnfinishedTask);
     }
 }

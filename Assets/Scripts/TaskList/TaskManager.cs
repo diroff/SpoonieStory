@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TaskManager : MonoBehaviour
@@ -10,11 +11,17 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private List<Task> _currentTasks = new List<Task>();
     [SerializeField] private List<Task> _availableTasks = new List<Task>();
 
-    private bool _openedFirstTime = true;
+    [SerializeField] private TextMeshProUGUI _exitButtonText;
+    [SerializeField] private TimeManagment _timeManagment;
+
+    public int TodayFailedTasks = 0;
+    public int YesterdayFailedTasks = 0;
+
+    public bool OpenedFirstTime = true;
 
     private void OnEnable()
     {
-        if (_openedFirstTime)
+        if (OpenedFirstTime)
             OpenFirstTime();
         else
             CheckTasks();
@@ -23,28 +30,32 @@ public class TaskManager : MonoBehaviour
     public void DoneTasks()
     {
         _taskPanel.SetActive(false);
-        _openedFirstTime = false;
+        OpenedFirstTime = false;
     }
 
     public void OpenFirstTime()
     {
-        CheckButtonState();
+        _taskListPanel.SetActive(true);
 
-        for (int i = 0; i < _currentTasks.Count; i++)
+        for (int i = 0; i < _availableTasks.Count; i++)
         {
-            _currentTasks[i].SetQuestText();
+            _availableTasks[i].IsComplete = false;
         }
 
         for (int i = 0; i < _currentTasks.Count; i++)
         {
             RemoveTask(_currentTasks[i]);
+            _currentTasks[i].CheckQuestStatus(_timeManagment.CurrentHours);
         }
 
         EnableTasksAdding();
+        _exitButtonText.text = "Done!";
     }
 
     public void CheckTasks()
     {
+        _taskListPanel.SetActive(false);
+
         for (int i = 0; i < _currentTasks.Count; i++)
         {
             _currentTasks[i].AddTask();
@@ -52,10 +63,24 @@ public class TaskManager : MonoBehaviour
             if (_currentTasks[i].TaskLink != null)
                 _currentTasks[i].IsComplete = _currentTasks[i].TaskLink.IsComplete;
 
-            _currentTasks[i].CheckQuestStatus();
+            _currentTasks[i].CheckQuestStatus(_timeManagment.CurrentHours);
         }
 
         DisableTasksAdding();
+        _exitButtonText.text = "Exit";
+    }
+
+    public void CheckFailedTasksCount()
+    {
+        for (int i = 0; i < _currentTasks.Count; i++)
+        {
+            if (!_currentTasks[i].IsEmpty && !_currentTasks[i].IsComplete)
+                TodayFailedTasks++;
+        }
+
+        YesterdayFailedTasks = TodayFailedTasks;
+        TodayFailedTasks = 0;
+        Debug.Log("You failed " + YesterdayFailedTasks + " tasks!");
     }
 
     public void EnableTasksAdding()
@@ -72,6 +97,19 @@ public class TaskManager : MonoBehaviour
         {
             _availableTasks[i].AddTask();
         }
+    }
+
+    public int GetCountUnfinishedTasks()
+    {
+        int count = 0;
+
+        for (int i = 0; i < _currentTasks.Count; i++)
+        {
+            if (!_currentTasks[i].IsEmpty && !_currentTasks[i].IsComplete)
+                count++;
+        }
+
+        return count;
     }
 
     public void AddTask(Task task)
@@ -106,6 +144,11 @@ public class TaskManager : MonoBehaviour
         task.SetQuestText();
         task.RemoveTask();
         CheckButtonState();
+    }
+
+    public void OpenPanel()
+    {
+        _taskPanel.SetActive(true);
     }
 
     public void CheckButtonState()

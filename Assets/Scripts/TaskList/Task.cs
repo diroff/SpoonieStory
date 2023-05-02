@@ -31,12 +31,21 @@ public class Task : MonoBehaviour
         _descripionText.text = Description;
     }
 
-    public void CheckQuestStatus()
+    public void CheckQuestStatus(int currentHoursTime)
     {
+        _descripionText.color = Color.black;
+
         if (IsComplete)
             _descripionText.fontStyle = FontStyles.Strikethrough;
+        else if(!IsComplete && currentHoursTime >= 18 && !IsEmpty)
+            _descripionText.color = Color.red;
         else
             _descripionText.fontStyle = FontStyles.Normal;
+    }
+
+    public void UnCompleteQuest()
+    {
+        IsComplete = false;
     }
 
     public void AddTask()
