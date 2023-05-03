@@ -14,6 +14,8 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _exitButtonText;
     [SerializeField] private TimeManagment _timeManagment;
 
+    [SerializeField] private SchoolTask _schoolTask;
+
     public int TodayFailedTasks = 0;
     public int YesterdayFailedTasks = 0;
 
@@ -35,6 +37,7 @@ public class TaskManager : MonoBehaviour
 
     public void OpenFirstTime()
     {
+        _schoolTask.FirstOpen(_timeManagment.CurrentWeekDay);
         _taskListPanel.SetActive(true);
 
         for (int i = 0; i < _currentTasks.Count; i++)
@@ -59,6 +62,8 @@ public class TaskManager : MonoBehaviour
 
     public void CheckTasks()
     {
+        _schoolTask.ShowProgress();
+
         _taskListPanel.SetActive(false);
 
         for (int i = 0; i < _currentTasks.Count; i++)
@@ -87,6 +92,9 @@ public class TaskManager : MonoBehaviour
             if (!_currentTasks[i].IsEmpty && !_currentTasks[i].IsComplete)
                 TodayFailedTasks++;
         }
+
+        if (!_schoolTask.IsComplete)
+            TodayFailedTasks++;
 
         YesterdayFailedTasks = TodayFailedTasks;
         TodayFailedTasks = 0;

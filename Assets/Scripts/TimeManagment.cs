@@ -11,6 +11,7 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private Grade _grade;
     [SerializeField] private StudyController _studyController;
     [SerializeField] private TaskManager _taskManager;
+    [SerializeField] private Lessons _lessons;
 
     private int _currentDays;
     private int _currentHours;
@@ -117,6 +118,7 @@ public class TimeManagment : MonoBehaviour
         _taskManager.OpenedFirstTime = true;
         _taskManager.CheckTasks();
         _taskManager.CheckFailedTasksCount();
+        _lessons.ResetLessons();
     }
 
     private void OpenTaskManager()

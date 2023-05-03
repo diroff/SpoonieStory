@@ -1010,6 +1010,7 @@ MonoBehaviour:
   _grade: {fileID: 38908636}
   _studyController: {fileID: 280010356}
   _taskManager: {fileID: 1756814747}
+  _lessons: {fileID: 280010357}
   SchoolEnded:
     m_PersistentCalls:
       m_Calls: []
@@ -1199,6 +1200,18 @@ MonoBehaviour:
       - m_Target: {fileID: 26251463}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1683635529}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1782,6 +1795,18 @@ MonoBehaviour:
       - m_Target: {fileID: 61152237}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 893390560}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3933,6 +3958,7 @@ GameObject:
   - component: {fileID: 171675006}
   - component: {fileID: 171675008}
   - component: {fileID: 171675007}
+  - component: {fileID: 171675009}
   m_Layer: 5
   m_Name: Lesson6
   m_TagString: Untagged
@@ -3993,6 +4019,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomActions: {fileID: 1811202810}
   _room: {fileID: 171675005}
+--- !u!114 &171675009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171675005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85b874754d81af45b99d1ca895d7d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _schoolTask: {fileID: 196750735}
+  IsVisited: 0
 --- !u!1 &183947535
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,6 +4314,7 @@ GameObject:
   - component: {fileID: 196750732}
   - component: {fileID: 196750734}
   - component: {fileID: 196750733}
+  - component: {fileID: 196750735}
   m_Layer: 5
   m_Name: Quest
   m_TagString: Untagged
@@ -4398,6 +4439,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196750731}
   m_CullTransparentMesh: 1
+--- !u!114 &196750735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196750731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f6966ffbe1b5749b3ac8407ab8b8bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NeedToComplete: 5
+  CurrentValue: 0
+  Description: 'Attend classes:'
+  TaskText: {fileID: 196750733}
+  IsComplete: 0
+  IsEmpty: 0
 --- !u!1 &199597899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,6 +4586,18 @@ MonoBehaviour:
       - m_Target: {fileID: 199597901}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2078715780}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5672,6 +5743,7 @@ GameObject:
   - component: {fileID: 280010353}
   - component: {fileID: 280010355}
   - component: {fileID: 280010356}
+  - component: {fileID: 280010357}
   m_Layer: 5
   m_Name: GameField
   m_TagString: Untagged
@@ -5804,6 +5876,25 @@ MonoBehaviour:
   HomeworkFinished:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &280010357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280010351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c76ad81ef377b947842bd6caa22fc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lessons:
+  - {fileID: 713847916}
+  - {fileID: 1683635529}
+  - {fileID: 2078715780}
+  - {fileID: 462177731}
+  - {fileID: 893390560}
+  - {fileID: 171675009}
 --- !u!1 &287799739
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,6 +5962,18 @@ MonoBehaviour:
       - m_Target: {fileID: 287799745}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 713847916}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6985,6 +7088,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 713847916}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &336726846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7553,6 +7668,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1683635529}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &384304573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7957,6 +8084,18 @@ MonoBehaviour:
       - m_Target: {fileID: 398150296}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 171675009}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8587,6 +8726,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2078715780}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &427066005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8887,6 +9038,18 @@ MonoBehaviour:
       - m_Target: {fileID: 433752518}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 171675009}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9677,6 +9840,7 @@ GameObject:
   - component: {fileID: 462177728}
   - component: {fileID: 462177730}
   - component: {fileID: 462177729}
+  - component: {fileID: 462177731}
   m_Layer: 5
   m_Name: Lesson4
   m_TagString: Untagged
@@ -9737,6 +9901,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomActions: {fileID: 92909671}
   _room: {fileID: 462177727}
+--- !u!114 &462177731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462177727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85b874754d81af45b99d1ca895d7d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _schoolTask: {fileID: 196750735}
+  IsVisited: 0
 --- !u!1 &463195680
 GameObject:
   m_ObjectHideFlags: 0
@@ -12341,6 +12519,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 713847916}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &623764479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14004,6 +14194,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 713847916}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &708261977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14094,6 +14296,7 @@ GameObject:
   - component: {fileID: 713847913}
   - component: {fileID: 713847914}
   - component: {fileID: 713847915}
+  - component: {fileID: 713847916}
   m_Layer: 5
   m_Name: Lesson1
   m_TagString: Untagged
@@ -14154,6 +14357,20 @@ MonoBehaviour:
   _minutesStarted: 0
   _hoursFinished: 9
   _minutesFinished: 45
+--- !u!114 &713847916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713847912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85b874754d81af45b99d1ca895d7d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _schoolTask: {fileID: 196750735}
+  IsVisited: 0
 --- !u!1 &715704639
 GameObject:
   m_ObjectHideFlags: 0
@@ -15026,6 +15243,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 462177731}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &781826407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15387,6 +15616,18 @@ MonoBehaviour:
       - m_Target: {fileID: 837279076}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1683635529}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16289,6 +16530,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 171675009}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &865422614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16685,6 +16938,7 @@ GameObject:
   - component: {fileID: 893390557}
   - component: {fileID: 893390559}
   - component: {fileID: 893390558}
+  - component: {fileID: 893390560}
   m_Layer: 5
   m_Name: Lesson5
   m_TagString: Untagged
@@ -16745,6 +16999,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomActions: {fileID: 917327761}
   _room: {fileID: 893390556}
+--- !u!114 &893390560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893390556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85b874754d81af45b99d1ca895d7d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _schoolTask: {fileID: 196750735}
+  IsVisited: 0
 --- !u!1 &893588044
 GameObject:
   m_ObjectHideFlags: 0
@@ -17542,11 +17810,11 @@ MonoBehaviour:
   _spoons: {fileID: 140252656}
   _hunger: {fileID: 1690864676}
   _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 140252656}
+  _variableParameter: {fileID: 1690864676}
   _actionSpoonsCost: 0
-  _actionHungerCost: -40
+  _actionHungerCost: 0
   _actionHygieneCost: 1
-  _changeValue: 0
+  _changeValue: 40
   _hoursActionCost: 0
   _minutesActionCost: 20
   _isRandomTime: 0
@@ -17554,7 +17822,7 @@ MonoBehaviour:
   _maxMinutesActionCost: 0
   _timeManagment: {fileID: 24715461}
   _disableInMaximum: 0
-  _disableInMinimum: 1
+  _disableInMinimum: 0
   _actions: {fileID: 715704641}
   _actionButton: {fileID: 925763527}
   _limitedTime: 0
@@ -20032,6 +20300,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 893390560}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1053784970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21014,6 +21294,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1108623004}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 462177731}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23596,6 +23888,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 462177731}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1267491399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24965,6 +25269,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1325126459}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 893390560}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26573,6 +26889,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1410616996}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 893390560}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28810,6 +29138,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1683635529}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1512877537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30740,6 +31080,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 171675009}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1631667051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31279,6 +31631,7 @@ GameObject:
   - component: {fileID: 1683635526}
   - component: {fileID: 1683635528}
   - component: {fileID: 1683635527}
+  - component: {fileID: 1683635529}
   m_Layer: 5
   m_Name: Lesson2
   m_TagString: Untagged
@@ -31339,6 +31692,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomActions: {fileID: 1972796114}
   _room: {fileID: 1683635525}
+--- !u!114 &1683635529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683635525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85b874754d81af45b99d1ca895d7d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _schoolTask: {fileID: 196750735}
+  IsVisited: 0
 --- !u!1 &1686444191
 GameObject:
   m_ObjectHideFlags: 0
@@ -33480,6 +33847,7 @@ MonoBehaviour:
   - {fileID: 326380147}
   _exitButtonText: {fileID: 1298322382}
   _timeManagment: {fileID: 24715461}
+  _schoolTask: {fileID: 196750735}
   TodayFailedTasks: 0
   YesterdayFailedTasks: 0
   OpenedFirstTime: 1
@@ -38006,6 +38374,7 @@ GameObject:
   - component: {fileID: 2078715777}
   - component: {fileID: 2078715779}
   - component: {fileID: 2078715778}
+  - component: {fileID: 2078715780}
   m_Layer: 5
   m_Name: Lesson3
   m_TagString: Untagged
@@ -38066,6 +38435,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomActions: {fileID: 2141138283}
   _room: {fileID: 2078715776}
+--- !u!114 &2078715780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078715776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85b874754d81af45b99d1ca895d7d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _schoolTask: {fileID: 196750735}
+  IsVisited: 0
 --- !u!1 &2083795910
 GameObject:
   m_ObjectHideFlags: 0
@@ -38671,6 +39054,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 462177731}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2114958090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38982,6 +39377,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2078715780}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2129791042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39272,6 +39679,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2144186773}
         m_TargetAssemblyTypeName: StudyAction, Assembly-CSharp
         m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2078715780}
+        m_TargetAssemblyTypeName: Lesson, Assembly-CSharp
+        m_MethodName: VisitLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
