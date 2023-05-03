@@ -9,20 +9,13 @@ public class GameOver : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _reason;
     [SerializeField] private Grade _grade;
 
-    private void OnEnable()
+    public void ShowGameOverPanel()
     {
-        _grade.GradesOver.AddListener(ShowGameOverPanel);
-    }
+        if (_grade.CurrentValue > 49)
+            return;
 
-    private void OnDisable()
-    {
-        _grade.GradesOver.RemoveListener(ShowGameOverPanel);
-    }
-
-    private void ShowGameOverPanel(string reason)
-    {
         _gamePanel.SetActive(false);
         _gameOverPanel.SetActive(true);
-        _reason.text = reason;
+        _reason.text = _grade.Reason;
     }
 }

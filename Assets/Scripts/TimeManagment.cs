@@ -12,6 +12,7 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private StudyController _studyController;
     [SerializeField] private TaskManager _taskManager;
     [SerializeField] private Lessons _lessons;
+    [SerializeField] private GameOver _gameOver;
 
     private int _currentDays;
     private int _currentHours;
@@ -96,6 +97,7 @@ public class TimeManagment : MonoBehaviour
         _schoolStarted = true;
         _studyController.WasInSchool(false);
         TaskManagerSetter();
+        GameOverChecker();
     }
 
     private void SchoolEndChecker()
@@ -119,6 +121,14 @@ public class TimeManagment : MonoBehaviour
         _taskManager.CheckTasks();
         _taskManager.CheckFailedTasksCount();
         _lessons.ResetLessons();
+    }
+
+    private void GameOverChecker()
+    {
+        if (_currentWeekDay != "Saturday")
+            return;
+
+        _gameOver.ShowGameOverPanel();
     }
 
     private void OpenTaskManager()

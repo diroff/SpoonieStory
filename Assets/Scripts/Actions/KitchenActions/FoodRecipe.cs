@@ -23,7 +23,7 @@ public class FoodRecipe : MonoBehaviour
     private void Awake()
     {
         RecipeButton = GetComponent<Button>();
-        ColorUtility.TryParseHtmlString("#BCF0BB", out _color);
+        ColorUtility.TryParseHtmlString("#ECFDB2", out _color);
     }
 
     public UnityEvent<int> CountChanged;
