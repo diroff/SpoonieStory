@@ -91,7 +91,7 @@ public class TimeManagment : MonoBehaviour
 
         _currentWeekDay = _weekDays[_currentWeekDayNumber];
         DayChanged?.Invoke(_currentDays, _weekDays[_currentWeekDayNumber]);
-        _grade.ReduceValue(2);
+        _grade.ReduceValue(5);
         _schoolStarted = true;
         _studyController.WasInSchool(false);
         TaskManagerSetter();
@@ -108,7 +108,6 @@ public class TimeManagment : MonoBehaviour
             }
 
             _schoolStarted = false;
-            Debug.Log("School ended");
             SchoolEnded?.Invoke();
         }
     }
@@ -123,9 +122,7 @@ public class TimeManagment : MonoBehaviour
     private void OpenTaskManager()
     {
         if (_currentHours >= 0 && _taskManager.OpenedFirstTime)
-        {
             _taskManager.OpenPanel();
-        }
     }
 
     private bool IsDayChanged() { return _currentHours >= 24 && _previousHour < 24; }

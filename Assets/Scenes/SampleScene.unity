@@ -3516,7 +3516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba66e9448758864db24607f7b837b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startValue: 12
+  _startValue: 8
   _minValue: 0
   _maxValue: 20
 --- !u!1 &141904199
@@ -7787,7 +7787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.019989014, y: -28.720001}
+  m_AnchoredPosition: {x: 0.019958496, y: -28.71994}
   m_SizeDelta: {x: -54.98, y: -149.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395947323
@@ -17544,7 +17544,7 @@ MonoBehaviour:
   _hygiene: {fileID: 740101156}
   _variableParameter: {fileID: 140252656}
   _actionSpoonsCost: 0
-  _actionHungerCost: -20
+  _actionHungerCost: -40
   _actionHygieneCost: 1
   _changeValue: 0
   _hoursActionCost: 0
