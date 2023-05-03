@@ -37,6 +37,11 @@ public class TaskManager : MonoBehaviour
     {
         _taskListPanel.SetActive(true);
 
+        for (int i = 0; i < _currentTasks.Count; i++)
+        {
+            _currentTasks[i].SetButtonEnabled(true);
+        }
+
         for (int i = 0; i < _availableTasks.Count; i++)
         {
             _availableTasks[i].IsComplete = false;
@@ -64,6 +69,11 @@ public class TaskManager : MonoBehaviour
                 _currentTasks[i].IsComplete = _currentTasks[i].TaskLink.IsComplete;
 
             _currentTasks[i].CheckQuestStatus(_timeManagment.CurrentHours);
+        }
+
+        for (int i = 0; i < _currentTasks.Count; i++)
+        {
+            _currentTasks[i].SetButtonEnabled(false);
         }
 
         DisableTasksAdding();
@@ -159,6 +169,8 @@ public class TaskManager : MonoBehaviour
                 _currentTasks[i].AddTask();
             else
                 _currentTasks[i].RemoveTask();
+
+            _currentTasks[i].CheckQuestStatus(_timeManagment.CurrentHours);
         }
     }
 

@@ -35,6 +35,9 @@ public class Task : MonoBehaviour
     {
         _descripionText.color = Color.black;
 
+        if (IsEmpty)
+            _descripionText.color = Color.gray;
+
         if (IsComplete)
             _descripionText.fontStyle = FontStyles.Strikethrough;
         else if(!IsComplete && currentHoursTime >= 18 && !IsEmpty)
@@ -56,5 +59,10 @@ public class Task : MonoBehaviour
     public void RemoveTask()
     {
         AddTaskButton.interactable = true;
+    }
+
+    public void SetButtonEnabled(bool enabled)
+    {
+        AddTaskButton.gameObject.SetActive(enabled);
     }
 }
