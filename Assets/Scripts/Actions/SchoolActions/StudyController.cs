@@ -14,6 +14,8 @@ public class StudyController : MonoBehaviour
     [SerializeField] private Grade _grade;
     [SerializeField] private bool _homeWorkReady;
     [SerializeField] private bool _wasOnSchool = false;
+    [SerializeField] private Effects _effects;
+
     [Header("Alerts")]
     [SerializeField] private Alert _lateAlert;
     [SerializeField] private Alert _classesOverAlert;
@@ -156,8 +158,8 @@ public class StudyController : MonoBehaviour
         if (_homeWorkReady && _wasOnSchool)
         {
             _grade.AddValue(1);
-            Debug.Log("Done");
             AlertController.Alerts.ShowAlert(_homeworkDoneAlert);
+            _effects.HomeworkDoneEffect.MakeEffect();
         }
         else if(!_homeWorkReady && _wasOnSchool)
         {
@@ -168,6 +170,7 @@ public class StudyController : MonoBehaviour
         else
         {
             AlertController.Alerts.ShowAlert(_skippingLessonsAlert);
+            _effects.SkippedClassesEffect.MakeEffect();
             _grade.ReduceValue(4);
         }
 

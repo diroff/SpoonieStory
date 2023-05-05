@@ -4,15 +4,20 @@ public class Lesson : MonoBehaviour
 {
     public SchoolTask _schoolTask;
     public bool IsVisited = false;
-    
+
+    private int _lessonTypeNumber = 0;
+
     public void VisitLesson()
     {
         if (!IsVisited)
         {
+            SetLessonType();
             IsVisited = true;
             _schoolTask.AddValue(1);
-            SetLessonType();
+            GetRandomNumber();
         }
+        else
+            SetLessonType();
     }
 
     public void UnVisitLesson()
@@ -20,34 +25,56 @@ public class Lesson : MonoBehaviour
         IsVisited = false;
     }
 
+    public void StopEffects()
+    {
+        _schoolTask.BoringTopic.StopEffect();
+        _schoolTask.DifficultTopic.StopEffect();
+        _schoolTask.EasyTopic.StopEffect();
+        _schoolTask.InterestingTopic.StopEffect();
+    }
+
     public void SetLessonType()
     {
-        int number = GetRandomNumber();
+        if (_lessonTypeNumber < 6)
+        {
+            if (!IsVisited)
+                _schoolTask.DifficultTopic.MakeEffect();
 
-        if (number < 6)
-        {
-            //Difficult
+            AlertController.Alerts.ShowAlert(_schoolTask.DifficultAlert);
+            Debug.Log("+");
         }
-        else if (number >= 6 && number < 11)
+        else if (_lessonTypeNumber >= 6 && _lessonTypeNumber < 11)
         {
-            //Boring
+            if (!IsVisited)
+                _schoolTask.BoringTopic.MakeEffect();
+
+            AlertController.Alerts.ShowAlert(_schoolTask.BoringAlert);
+            Debug.Log("+");
         }
-        else if (number >= 11 && number < 16)
+        else if (_lessonTypeNumber >= 11 && _lessonTypeNumber < 16)
         {
             //No effect
         }
-        else if(number >= 16 && number < 19)
-            {
-            //Easy
-        }
-        else if(number >= 19)
+        else if (_lessonTypeNumber >= 16 && _lessonTypeNumber < 19)
         {
-            //Interesting
+            if (!IsVisited)
+                _schoolTask.EasyTopic.MakeEffect();
+
+            AlertController.Alerts.ShowAlert(_schoolTask.EasyAlert);
+            Debug.Log("+");
+        }
+        else if (_lessonTypeNumber >= 19)
+        {
+            if (!IsVisited)
+                _schoolTask.InterestingTopic.MakeEffect();
+
+            AlertController.Alerts.ShowAlert(_schoolTask.InterestingAlert);
+            Debug.Log("+");
         }
     }
 
-    private int GetRandomNumber()
+    private void GetRandomNumber()
     {
-        return Random.Range(1, 21);
+        _lessonTypeNumber = Random.Range(1, 21);
     }
 }

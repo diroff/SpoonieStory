@@ -10,6 +10,10 @@ public class Effects : MonoBehaviour
     public TimedEffect InsomniaEffect;
     public TimedEffect SleptWellEffect;
     public TimedEffect EatingEffect;
+    public TimedEffect SkippedClassesEffect;
+    public TimedEffect HomeworkDoneEffect;
+    public TimedEffect AllTasksCompleteEffect;
+    public TimedEffect FailedTasksEffect;
 
     public void CheckEffectTimes()
     {

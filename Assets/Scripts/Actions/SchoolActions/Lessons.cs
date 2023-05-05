@@ -10,4 +10,10 @@ public class Lessons : MonoBehaviour
         foreach (Lesson lesson in _lessons)
             lesson.UnVisitLesson();
     }
+
+    public void StopLastEffect()
+    {
+        foreach (Lesson lesson in _lessons)
+            lesson.StopEffects();
+    }
 }

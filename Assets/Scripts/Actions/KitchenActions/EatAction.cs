@@ -13,6 +13,8 @@ public class EatAction : SimpleAction
     [SerializeField] private TextMeshProUGUI _buttonText;
     [SerializeField] private Effects _effects;
 
+    [SerializeField] private Alert _eatingAlert;
+
     protected FoodRecipe _currentRecipe;
 
     private void OnEnable()
@@ -31,6 +33,8 @@ public class EatAction : SimpleAction
 
         _cookingPanel.UpdateFoodCount(_currentRecipe.FoodCount);
         _effects.EatingEffect.MakeEffect();
+        AlertController.Alerts.ShowAlert(_eatingAlert);
+
         _actions.CheckActionsState();
         _cookingPanel.SetRecipe(_cookingPanel.CurrentRecipe);
     }

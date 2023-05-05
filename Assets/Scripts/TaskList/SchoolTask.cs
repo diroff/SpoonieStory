@@ -10,6 +10,16 @@ public class SchoolTask : MonoBehaviour
     public bool IsComplete = false;
     public bool IsEmpty = false;
 
+    public StickyEffect BoringTopic;
+    public StickyEffect InterestingTopic;
+    public StickyEffect EasyTopic;
+    public StickyEffect DifficultTopic;
+
+    public Alert BoringAlert;
+    public Alert InterestingAlert;
+    public Alert EasyAlert;
+    public Alert DifficultAlert;
+
     public void ShowProgress()
     {
         if (IsEmpty)

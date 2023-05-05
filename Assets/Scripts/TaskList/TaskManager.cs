@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,6 +14,9 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private TimeManagment _timeManagment;
 
     [SerializeField] private SchoolTask _schoolTask;
+    [SerializeField] private Effects _effects;
+
+    [SerializeField] private Alert _allTasksDone;
 
     public int TodayFailedTasks = 0;
     public int YesterdayFailedTasks = 0;
@@ -87,10 +89,17 @@ public class TaskManager : MonoBehaviour
 
     public void CheckFailedTasksCount()
     {
+        int yesterdayTasksCount = 0;
+
         for (int i = 0; i < _currentTasks.Count; i++)
         {
-            if (!_currentTasks[i].IsEmpty && !_currentTasks[i].IsComplete)
-                TodayFailedTasks++;
+            if (!_currentTasks[i].IsEmpty)
+            {
+                yesterdayTasksCount++;
+
+                if(!_currentTasks[i].IsComplete)
+                    TodayFailedTasks++;
+            }
         }
 
         if (!_schoolTask.IsComplete)
@@ -98,7 +107,16 @@ public class TaskManager : MonoBehaviour
 
         YesterdayFailedTasks = TodayFailedTasks;
         TodayFailedTasks = 0;
-        Debug.Log("You failed " + YesterdayFailedTasks + " tasks!");
+
+        if(YesterdayFailedTasks == 0 && yesterdayTasksCount > 0)
+        {
+            _effects.AllTasksCompleteEffect.MakeEffect();
+            AlertController.Alerts.ShowAlert(_allTasksDone);
+        }
+
+        if (YesterdayFailedTasks > 0)
+            _effects.FailedTasksEffect.MakeEffect();
+
     }
 
     public void EnableTasksAdding()
