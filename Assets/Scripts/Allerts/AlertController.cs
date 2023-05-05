@@ -30,6 +30,7 @@ public class AlertController : MonoBehaviour
     [SerializeField] private TimeManagment _timeManagment;
 
     [SerializeField] private StickyEffect _hungryEffect;
+    [SerializeField] private StickyEffect _dirtyEffect;
 
     private void Awake()
     {
@@ -103,9 +104,17 @@ public class AlertController : MonoBehaviour
         }
 
         if (_hygiene.CurrentValue <= 30 && _hygiene.CurrentValue > 10)
+        {
             ShowAlert(HygieneLessThirty);
+            _dirtyEffect.MakeEffect();
+        }
         else if (_hygiene.CurrentValue <= 10)
+        {
             ShowAlert(HygieneLessTen);
+            _dirtyEffect.MakeEffect();
+        }
+        else
+            _dirtyEffect.StopEffect();
 
         if (_grades.CurrentValue <= 54)
             ShowAlert(GradeIsLow);

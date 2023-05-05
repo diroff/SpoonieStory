@@ -19004,8 +19004,9 @@ Transform:
   - {fileID: 226850752}
   - {fileID: 84253534}
   - {fileID: 2082545473}
-  - {fileID: 1618146635}
   - {fileID: 1152542415}
+  - {fileID: 1618146635}
+  - {fileID: 1941799146}
   m_Father: {fileID: 1318496059}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26065,7 +26066,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 876557011}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1152542416
 MonoBehaviour:
@@ -35866,7 +35867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 876557011}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1618146636
 MonoBehaviour:
@@ -39101,6 +39102,7 @@ MonoBehaviour:
   _taskManager: {fileID: 1756814747}
   _timeManagment: {fileID: 24715461}
   _hungryEffect: {fileID: 1618146636}
+  _dirtyEffect: {fileID: 1941799147}
 --- !u!1 &1756814743
 GameObject:
   m_ObjectHideFlags: 0
@@ -42214,6 +42216,63 @@ Transform:
   m_Father: {fileID: 1318496059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1941799145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941799146}
+  - component: {fileID: 1941799147}
+  m_Layer: 0
+  m_Name: DirtyEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1941799146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941799145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876557011}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941799147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941799145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442da64820f4bc74abb24c6bb0e43320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Dirty
+  Emotions: {fileID: 1230206956}
+  TimeManagment: {fileID: 24715461}
+  SadCost: 0
+  FrustratedCost: 2
+  BoredCost: 0
+  ExcitedCost: -2
+  AttentiveCost: -2
+  HoursLasts: 0
+  CountOfEffects: 0
+  HoursStarted: 0
+  MinutesStarted: 0
+  EffectStarted: 0
 --- !u!1 &1945833780
 GameObject:
   m_ObjectHideFlags: 0
