@@ -5,7 +5,10 @@ public class Effects : MonoBehaviour
 {
     [SerializeField] private List<Effect> _effects;
 
-    public NightmareEffect NightmareEffect;
+    [Header("Sleep effects")]
+    public SleepEffect NightmareEffect;
+    public SleepEffect InsomniaEffect;
+    public SleepEffect SleptWellEffect;
 
     public void CheckEffectTimes()
     {

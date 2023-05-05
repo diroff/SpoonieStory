@@ -29,6 +29,7 @@ public class SleepEvent : MonoBehaviour
         if (randomValue < 4)
         {
             AlertController.Alerts.ShowAlert(_insomniaAlert);
+            _effects.InsomniaEffect.MakeEffect();
             return -3;
         }
 
@@ -48,6 +49,7 @@ public class SleepEvent : MonoBehaviour
         if (randomValue >= 19)
         {
             AlertController.Alerts.ShowAlert(_refreshAlert);
+            _effects.SleptWellEffect.MakeEffect();
             return 2;
         }
 

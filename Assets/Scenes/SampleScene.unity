@@ -495,7 +495,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1517744155}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -531,8 +531,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2224,6 +2224,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81755134}
   m_CullTransparentMesh: 1
+--- !u!1 &84253532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84253534}
+  - component: {fileID: 84253533}
+  m_Layer: 0
+  m_Name: InsomniaEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &84253533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84253532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72f9449b22fa8d4eb3cfe9f3c9208cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Insomnia
+  Emotions: {fileID: 1230206956}
+  TimeManagment: {fileID: 24715461}
+  SadCost: 2
+  FrustratedCost: 4
+  BoredCost: 2
+  ExcitedCost: -4
+  AttentiveCost: -6
+  HoursLasts: 4
+  CountOfEffects: 0
+  HoursStarted: 0
+  MinutesStarted: 0
+  EffectStarted: 0
+--- !u!4 &84253534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84253532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876557011}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &84839587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,7 +3969,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1517744155}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3948,8 +4005,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5027,14 +5084,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 226850751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d0820aa1bd9fd42806efbbe3bd9798, type: 3}
+  m_Script: {fileID: 11500000, guid: e72f9449b22fa8d4eb3cfe9f3c9208cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Nightmare
   Emotions: {fileID: 1230206956}
   TimeManagment: {fileID: 24715461}
-  CountOfEffects: 0
+  SadCost: 4
+  FrustratedCost: 2
+  BoredCost: -2
+  ExcitedCost: -2
+  AttentiveCost: -4
   HoursLasts: 2
+  CountOfEffects: 0
   HoursStarted: 0
   MinutesStarted: 0
   EffectStarted: 0
@@ -16130,6 +16192,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715704639}
   m_CullTransparentMesh: 1
+--- !u!1 &718217839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718217840}
+  - component: {fileID: 718217842}
+  - component: {fileID: 718217841}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &718217840
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718217839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1517744155}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 970, y: 830}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &718217841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718217839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: cef33a21047cb1949ae52d1f1a78288d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &718217842
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718217839}
+  m_CullTransparentMesh: 1
 --- !u!1 &718951925
 GameObject:
   m_ObjectHideFlags: 0
@@ -18864,6 +19002,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 226850752}
+  - {fileID: 84253534}
+  - {fileID: 2082545473}
   m_Father: {fileID: 1318496059}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18881,7 +19021,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effects:
   - {fileID: 226850753}
+  - {fileID: 84253533}
+  - {fileID: 2082545474}
   NightmareEffect: {fileID: 226850753}
+  InsomniaEffect: {fileID: 84253533}
+  SleptWellEffect: {fileID: 2082545474}
 --- !u!1 &878307429
 GameObject:
   m_ObjectHideFlags: 0
@@ -33944,6 +34088,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 718217840}
   - {fileID: 164101212}
   - {fileID: 9213058}
   m_Father: {fileID: 11446792}
@@ -33967,7 +34112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.5764706, g: 0.8039216, b: 0.9254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -44657,6 +44802,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _schoolTask: {fileID: 196750735}
   IsVisited: 0
+--- !u!1 &2082545472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082545473}
+  - component: {fileID: 2082545474}
+  m_Layer: 0
+  m_Name: SleptWellEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2082545473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082545472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876557011}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2082545474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082545472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72f9449b22fa8d4eb3cfe9f3c9208cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Slept well
+  Emotions: {fileID: 1230206956}
+  TimeManagment: {fileID: 24715461}
+  SadCost: 0
+  FrustratedCost: 0
+  BoredCost: 0
+  ExcitedCost: 2
+  AttentiveCost: 2
+  HoursLasts: 2
+  CountOfEffects: 0
+  HoursStarted: 0
+  MinutesStarted: 0
+  EffectStarted: 0
 --- !u!1 &2083795910
 GameObject:
   m_ObjectHideFlags: 0

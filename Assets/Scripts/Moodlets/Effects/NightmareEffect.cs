@@ -7,15 +7,15 @@ public class NightmareEffect : Effect
         HoursStarted = TimeManagment.CurrentHours;
         MinutesStarted = TimeManagment.CurrentMinutes;
 
-        Emotions.ChangeSad(2);
-        Emotions.ChangeFrustrated(1);
-        Emotions.ChangeBored(-1);
-        Emotions.ChangeExcited(-1);
-        Emotions.ChangeAttentive(-2);
+        Emotions.ChangeSad(4);
+        Emotions.ChangeFrustrated(2);
+        Emotions.ChangeBored(-2);
+        Emotions.ChangeExcited(-2);
+        Emotions.ChangeAttentive(-4);
         EffectStarted = true;
         CountOfEffects += 1;
 
-        Debug.Log("Effect started!");
+        Debug.Log("Nightmare started!");
     }
 
     public override void StopEffect()
@@ -31,6 +31,6 @@ public class NightmareEffect : Effect
         EffectStarted = false;
         CountOfEffects = 0;
 
-        Debug.Log("Effect ended!");
+        Debug.Log("Nightmare ended!");
     }
 }
