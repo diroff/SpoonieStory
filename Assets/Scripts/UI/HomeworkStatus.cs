@@ -19,7 +19,7 @@ public class HomeworkStatus : MonoBehaviour
 
     private void DisplayHomeworkStatus(bool isReady)
     {
-        _statusText.text = "Homework:";
+        _statusText.text = "Homework: ";
 
         if (isReady)
             _statusText.text += "finished";

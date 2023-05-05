@@ -48,7 +48,7 @@ public class SchoolTask : MonoBehaviour
         {
             IsEmpty = true;
             TaskText.color = Color.gray;
-            TaskText.text = "empty";
+            TaskText.text = "No plans here!";
         }
         else
         {

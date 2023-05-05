@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class FoodRecipe : MonoBehaviour
 {
     public string Name;
+    [TextArea(1, 2)]
     public string Description;
     public int TimeCooking;
     public int TimeEating;
