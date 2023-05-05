@@ -8,6 +8,9 @@ public class SleepEvent : MonoBehaviour
     [SerializeField] private Alert _nightmareAlert;
     [SerializeField] private Alert _neutralAlert;
     [SerializeField] private Alert _refreshAlert;
+
+    [SerializeField] private Effects _effects;
+
     public void CalculateSpoonsCount(int sleptHours)
     {
         _spoons.AddValue(sleptHours);
@@ -32,6 +35,7 @@ public class SleepEvent : MonoBehaviour
         if (randomValue >= 4 && randomValue < 9)
         {
             AlertController.Alerts.ShowAlert(_nightmareAlert);
+            _effects.NightmareEffect.MakeEffect();
             return -2;
         }
 

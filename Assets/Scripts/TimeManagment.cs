@@ -13,6 +13,7 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private TaskManager _taskManager;
     [SerializeField] private Lessons _lessons;
     [SerializeField] private GameOver _gameOver;
+    [SerializeField] private Effects _effects;
 
     private int _currentDays;
     private int _currentHours;
@@ -72,6 +73,7 @@ public class TimeManagment : MonoBehaviour
         MinutesChanged?.Invoke(_currentMinutes);
         SchoolEndChecker();
         OpenTaskManager();
+        _effects.CheckEffectTimes();
     }
 
     public void SetTime(int hours, int minutes)
