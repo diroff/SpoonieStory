@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SleepEffect : Effect
+public class TimedEffect : Effect
 {
     public override void MakeEffect()
     {
@@ -34,7 +34,6 @@ public class SleepEffect : Effect
     {
         if (!EffectStarted)
             return;
-
 
         Emotions.ChangeSad(-SadCost);
         Emotions.ChangeFrustrated(-FrustratedCost);

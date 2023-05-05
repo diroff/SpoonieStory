@@ -2233,7 +2233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84253534}
-  - component: {fileID: 84253533}
+  - component: {fileID: 84253535}
   m_Layer: 0
   m_Name: InsomniaEffect
   m_TagString: Untagged
@@ -2241,31 +2241,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &84253533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84253532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72f9449b22fa8d4eb3cfe9f3c9208cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Insomnia
-  Emotions: {fileID: 1230206956}
-  TimeManagment: {fileID: 24715461}
-  SadCost: 2
-  FrustratedCost: 4
-  BoredCost: 2
-  ExcitedCost: -4
-  AttentiveCost: -6
-  HoursLasts: 4
-  CountOfEffects: 0
-  HoursStarted: 0
-  MinutesStarted: 0
-  EffectStarted: 0
 --- !u!4 &84253534
 Transform:
   m_ObjectHideFlags: 0
@@ -2281,6 +2256,31 @@ Transform:
   m_Father: {fileID: 876557011}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84253535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84253532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89394db9fc0612a4eab01f6060fbfa17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Insomnia
+  Emotions: {fileID: 1230206956}
+  TimeManagment: {fileID: 24715461}
+  SadCost: 2
+  FrustratedCost: 4
+  BoredCost: 2
+  ExcitedCost: -4
+  AttentiveCost: -6
+  HoursLasts: 4
+  CountOfEffects: 0
+  HoursStarted: 0
+  MinutesStarted: 0
+  EffectStarted: 0
 --- !u!1 &84839587
 GameObject:
   m_ObjectHideFlags: 0
@@ -5084,7 +5084,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 226850751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72f9449b22fa8d4eb3cfe9f3c9208cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 89394db9fc0612a4eab01f6060fbfa17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Nightmare
@@ -19004,6 +19004,8 @@ Transform:
   - {fileID: 226850752}
   - {fileID: 84253534}
   - {fileID: 2082545473}
+  - {fileID: 1618146635}
+  - {fileID: 1152542415}
   m_Father: {fileID: 1318496059}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19021,11 +19023,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effects:
   - {fileID: 226850753}
-  - {fileID: 84253533}
+  - {fileID: 84253535}
   - {fileID: 2082545474}
+  - {fileID: 1152542416}
   NightmareEffect: {fileID: 226850753}
-  InsomniaEffect: {fileID: 84253533}
+  InsomniaEffect: {fileID: 84253535}
   SleptWellEffect: {fileID: 2082545474}
+  EatingEffect: {fileID: 1152542416}
 --- !u!1 &878307429
 GameObject:
   m_ObjectHideFlags: 0
@@ -26031,6 +26035,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147031385}
   m_CullTransparentMesh: 1
+--- !u!1 &1152542414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1152542415}
+  - component: {fileID: 1152542416}
+  m_Layer: 0
+  m_Name: EatingEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1152542415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152542414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876557011}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1152542416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152542414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89394db9fc0612a4eab01f6060fbfa17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Nice snack
+  Emotions: {fileID: 1230206956}
+  TimeManagment: {fileID: 24715461}
+  SadCost: -2
+  FrustratedCost: -2
+  BoredCost: 0
+  ExcitedCost: 2
+  AttentiveCost: 0
+  HoursLasts: 2
+  CountOfEffects: 0
+  HoursStarted: 0
+  MinutesStarted: 0
+  EffectStarted: 0
 --- !u!1 &1160816377
 GameObject:
   m_ObjectHideFlags: 0
@@ -35775,6 +35836,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602245404}
   m_CullTransparentMesh: 1
+--- !u!1 &1618146634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618146635}
+  - component: {fileID: 1618146636}
+  m_Layer: 0
+  m_Name: HungryEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618146635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618146634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876557011}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1618146636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618146634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442da64820f4bc74abb24c6bb0e43320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Hungry
+  Emotions: {fileID: 1230206956}
+  TimeManagment: {fileID: 24715461}
+  SadCost: 2
+  FrustratedCost: 2
+  BoredCost: 0
+  ExcitedCost: -2
+  AttentiveCost: -2
+  HoursLasts: 0
+  CountOfEffects: 0
+  HoursStarted: 0
+  MinutesStarted: 0
+  EffectStarted: 0
 --- !u!1 &1621272286
 GameObject:
   m_ObjectHideFlags: 0
@@ -38982,6 +39100,7 @@ MonoBehaviour:
   _grades: {fileID: 38908636}
   _taskManager: {fileID: 1756814747}
   _timeManagment: {fileID: 24715461}
+  _hungryEffect: {fileID: 1618146636}
 --- !u!1 &1756814743
 GameObject:
   m_ObjectHideFlags: 0
@@ -39412,6 +39531,7 @@ MonoBehaviour:
   _cookingPanel: {fileID: 80844197}
   _button: {fileID: 1775316486}
   _buttonText: {fileID: 1421609549}
+  _effects: {fileID: 876557012}
 --- !u!1 &1776124381
 GameObject:
   m_ObjectHideFlags: 0
@@ -44843,7 +44963,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082545472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72f9449b22fa8d4eb3cfe9f3c9208cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 89394db9fc0612a4eab01f6060fbfa17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Slept well

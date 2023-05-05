@@ -11,6 +11,7 @@ public class EatAction : SimpleAction
 
     [SerializeField] private Button _button;
     [SerializeField] private TextMeshProUGUI _buttonText;
+    [SerializeField] private Effects _effects;
 
     protected FoodRecipe _currentRecipe;
 
@@ -29,6 +30,7 @@ public class EatAction : SimpleAction
         _currentRecipe.ChangeFoodCount(-1);
 
         _cookingPanel.UpdateFoodCount(_currentRecipe.FoodCount);
+        _effects.EatingEffect.MakeEffect();
         _actions.CheckActionsState();
         _cookingPanel.SetRecipe(_cookingPanel.CurrentRecipe);
     }
