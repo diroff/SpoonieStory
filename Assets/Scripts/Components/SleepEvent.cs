@@ -23,25 +23,25 @@ public class SleepEvent : MonoBehaviour
     {
         int randomValue = Random.Range(0, 21);
 
-        if (randomValue >= 0 && randomValue <= 4)
+        if (randomValue < 4)
         {
             AlertController.Alerts.ShowAlert(_insomniaAlert);
             return -3;
         }
 
-        if (randomValue >= 5 && randomValue <= 11)
+        if (randomValue >= 4 && randomValue < 9)
         {
             AlertController.Alerts.ShowAlert(_nightmareAlert);
             return -2;
         }
 
-        if (randomValue >= 12 && randomValue <= 18)
+        if (randomValue >= 9 && randomValue < 19)
         {
             AlertController.Alerts.ShowAlert(_neutralAlert);
             return 0;
         }
 
-        if (randomValue >= 19 && randomValue <= 20)
+        if (randomValue >= 19)
         {
             AlertController.Alerts.ShowAlert(_refreshAlert);
             return 2;
