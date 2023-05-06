@@ -18,6 +18,6 @@ public class DayDisplayer : MonoBehaviour
 
     private void DisplayDay(int day, string dayWeek)
     {
-        _timeValue.text = "Day " + day + ":" + dayWeek;
+        _timeValue.text = "Day " + day + ": " + dayWeek;
     }
 }

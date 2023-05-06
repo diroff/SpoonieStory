@@ -45,7 +45,7 @@ public class CookingPanel : MonoBehaviour
         _description.text = _currentRecipe.Description;
         _timeCookCost.text = "Time cooking: " + _currentRecipe.TimeCooking + " min";
         _timeEatCost.text = "Time eating: " + _currentRecipe.TimeEating + " min";
-        _hunger.text = "Hunger:" + _currentRecipe.Hunger;
+        _hunger.text = "Hunger: " + _currentRecipe.Hunger;
         UpdateFoodCount(_currentRecipe.FoodCount);
         _cookingAction.SetCost(_currentRecipe);
         _eatAction.SetCost(_currentRecipe);
