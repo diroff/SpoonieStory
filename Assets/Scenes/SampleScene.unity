@@ -8223,7 +8223,7 @@ GameObject:
   - component: {fileID: 381453934}
   - component: {fileID: 381453933}
   - component: {fileID: 381453932}
-  - component: {fileID: 381453931}
+  - component: {fileID: 381453935}
   m_Layer: 5
   m_Name: TakeShower
   m_TagString: Untagged
@@ -8252,43 +8252,6 @@ RectTransform:
   m_AnchoredPosition: {x: 320, y: -301.495}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &381453931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381453929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748803965d9560f4fb6906f318a9ab55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spoons: {fileID: 140252656}
-  _hunger: {fileID: 1690864676}
-  _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 1690864676}
-  _actionSpoonsCost: 2
-  _actionHungerCost: 0
-  _actionHygieneCost: -20
-  _changeValue: -3
-  _hoursActionCost: 0
-  _minutesActionCost: 15
-  _isRandomTime: 0
-  _maxHoursActionCost: 0
-  _maxMinutesActionCost: 0
-  _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 0
-  _disableInMinimum: 1
-  _actions: {fileID: 1002099035}
-  _actionButton: {fileID: 381453932}
-  _limitedTime: 0
-  _minHoursActivation: 0
-  _maxHoursActivation: 0
-  _limitedMinutes: 0
-  _minMinutesActivation: 0
-  _maxMinutesActivation: 0
-  _canBeHided: 0
 --- !u!114 &381453932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8333,8 +8296,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 381453931}
-        m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
+      - m_Target: {fileID: 381453935}
+        m_TargetAssemblyTypeName: BathroomAction, Assembly-CSharp
         m_MethodName: DoAction
         m_Mode: 1
         m_Arguments:
@@ -8395,6 +8358,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381453929}
   m_CullTransparentMesh: 1
+--- !u!114 &381453935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381453929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987369578fdba848a3ebd6754d67b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spoons: {fileID: 140252656}
+  _hunger: {fileID: 1690864676}
+  _hygiene: {fileID: 740101156}
+  _variableParameter: {fileID: 1690864676}
+  _actionSpoonsCost: 2
+  _actionHungerCost: 0
+  _actionHygieneCost: -20
+  _changeValue: -3
+  _hoursActionCost: 0
+  _minutesActionCost: 15
+  _isRandomTime: 0
+  _maxHoursActionCost: 0
+  _maxMinutesActionCost: 0
+  _timeManagment: {fileID: 24715461}
+  _disableInMaximum: 0
+  _disableInMinimum: 1
+  _actions: {fileID: 1002099035}
+  _actionButton: {fileID: 381453932}
+  _limitedTime: 0
+  _minHoursActivation: 0
+  _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
+  _canBeHided: 0
+  UsedOnVisit: 0
 --- !u!1 &384304570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10883,7 +10884,7 @@ GameObject:
   - component: {fileID: 455028503}
   - component: {fileID: 455028502}
   - component: {fileID: 455028501}
-  - component: {fileID: 455028500}
+  - component: {fileID: 455028504}
   m_Layer: 5
   m_Name: WashUp
   m_TagString: Untagged
@@ -10912,43 +10913,6 @@ RectTransform:
   m_AnchoredPosition: {x: 320, y: -141.495}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &455028500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455028498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748803965d9560f4fb6906f318a9ab55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spoons: {fileID: 140252656}
-  _hunger: {fileID: 1690864676}
-  _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 1690864676}
-  _actionSpoonsCost: 1
-  _actionHungerCost: 0
-  _actionHygieneCost: -2
-  _changeValue: -2
-  _hoursActionCost: 0
-  _minutesActionCost: 5
-  _isRandomTime: 0
-  _maxHoursActionCost: 0
-  _maxMinutesActionCost: 0
-  _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 0
-  _disableInMinimum: 1
-  _actions: {fileID: 1002099035}
-  _actionButton: {fileID: 455028501}
-  _limitedTime: 0
-  _minHoursActivation: 0
-  _maxHoursActivation: 0
-  _limitedMinutes: 0
-  _minMinutesActivation: 0
-  _maxMinutesActivation: 0
-  _canBeHided: 0
 --- !u!114 &455028501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10993,8 +10957,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 455028500}
-        m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
+      - m_Target: {fileID: 455028504}
+        m_TargetAssemblyTypeName: BathroomAction, Assembly-CSharp
         m_MethodName: DoAction
         m_Mode: 1
         m_Arguments:
@@ -11043,6 +11007,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455028498}
   m_CullTransparentMesh: 1
+--- !u!114 &455028504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455028498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987369578fdba848a3ebd6754d67b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spoons: {fileID: 140252656}
+  _hunger: {fileID: 1690864676}
+  _hygiene: {fileID: 740101156}
+  _variableParameter: {fileID: 1690864676}
+  _actionSpoonsCost: 1
+  _actionHungerCost: 0
+  _actionHygieneCost: -2
+  _changeValue: -2
+  _hoursActionCost: 0
+  _minutesActionCost: 5
+  _isRandomTime: 0
+  _maxHoursActionCost: 0
+  _maxMinutesActionCost: 0
+  _timeManagment: {fileID: 24715461}
+  _disableInMaximum: 0
+  _disableInMinimum: 1
+  _actions: {fileID: 1002099035}
+  _actionButton: {fileID: 455028501}
+  _limitedTime: 0
+  _minHoursActivation: 0
+  _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
+  _canBeHided: 0
+  UsedOnVisit: 0
 --- !u!1 &457659696
 GameObject:
   m_ObjectHideFlags: 0
@@ -22928,9 +22930,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomActions:
-  - {fileID: 455028500}
-  - {fileID: 1499493421}
-  - {fileID: 381453931}
+  - {fileID: 455028504}
+  - {fileID: 1499493425}
+  - {fileID: 381453935}
 --- !u!114 &1002099036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24453,6 +24455,42 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: RoomController, Assembly-CSharp
         m_MethodName: CloseRoom
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455028504}
+        m_TargetAssemblyTypeName: BathroomAction, Assembly-CSharp
+        m_MethodName: Used
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1499493425}
+        m_TargetAssemblyTypeName: BathroomAction, Assembly-CSharp
+        m_MethodName: Used
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 381453935}
+        m_TargetAssemblyTypeName: BathroomAction, Assembly-CSharp
+        m_MethodName: Used
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -33967,7 +34005,7 @@ GameObject:
   - component: {fileID: 1499493424}
   - component: {fileID: 1499493423}
   - component: {fileID: 1499493422}
-  - component: {fileID: 1499493421}
+  - component: {fileID: 1499493425}
   m_Layer: 5
   m_Name: CombHair
   m_TagString: Untagged
@@ -33996,43 +34034,6 @@ RectTransform:
   m_AnchoredPosition: {x: 320, y: -221.495}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1499493421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499493419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748803965d9560f4fb6906f318a9ab55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spoons: {fileID: 140252656}
-  _hunger: {fileID: 1690864676}
-  _hygiene: {fileID: 740101156}
-  _variableParameter: {fileID: 1690864676}
-  _actionSpoonsCost: 1
-  _actionHungerCost: 0
-  _actionHygieneCost: -2
-  _changeValue: -2
-  _hoursActionCost: 0
-  _minutesActionCost: 5
-  _isRandomTime: 1
-  _maxHoursActionCost: 0
-  _maxMinutesActionCost: 10
-  _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 0
-  _disableInMinimum: 1
-  _actions: {fileID: 1002099035}
-  _actionButton: {fileID: 1499493422}
-  _limitedTime: 0
-  _minHoursActivation: 0
-  _maxHoursActivation: 0
-  _limitedMinutes: 0
-  _minMinutesActivation: 0
-  _maxMinutesActivation: 0
-  _canBeHided: 0
 --- !u!114 &1499493422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34077,8 +34078,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1499493421}
-        m_TargetAssemblyTypeName: SimpleAction, Assembly-CSharp
+      - m_Target: {fileID: 1499493425}
+        m_TargetAssemblyTypeName: BathroomAction, Assembly-CSharp
         m_MethodName: DoAction
         m_Mode: 1
         m_Arguments:
@@ -34127,6 +34128,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499493419}
   m_CullTransparentMesh: 1
+--- !u!114 &1499493425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499493419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987369578fdba848a3ebd6754d67b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spoons: {fileID: 140252656}
+  _hunger: {fileID: 1690864676}
+  _hygiene: {fileID: 740101156}
+  _variableParameter: {fileID: 1690864676}
+  _actionSpoonsCost: 1
+  _actionHungerCost: 0
+  _actionHygieneCost: -2
+  _changeValue: -2
+  _hoursActionCost: 0
+  _minutesActionCost: 5
+  _isRandomTime: 1
+  _maxHoursActionCost: 0
+  _maxMinutesActionCost: 10
+  _timeManagment: {fileID: 24715461}
+  _disableInMaximum: 0
+  _disableInMinimum: 1
+  _actions: {fileID: 1002099035}
+  _actionButton: {fileID: 1499493422}
+  _limitedTime: 0
+  _minHoursActivation: 0
+  _maxHoursActivation: 0
+  _limitedMinutes: 0
+  _minMinutesActivation: 0
+  _maxMinutesActivation: 0
+  _canBeHided: 0
+  UsedOnVisit: 0
 --- !u!1 &1502039521
 GameObject:
   m_ObjectHideFlags: 0
