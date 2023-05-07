@@ -41,7 +41,7 @@ public class Parameter : MonoBehaviour
 
     public virtual void ReduceValue(int count)
     {
-        if (IsMinimum())
+        if (IsMinimum() && count >= 0)
             return;
 
         _currentValue -= count;

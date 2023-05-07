@@ -25,6 +25,7 @@ public class EatAction : SimpleAction
     public override void DoAction()
     {
         _currentRecipe = _cookingPanel.CurrentRecipe;
+        SetCost(_currentRecipe);
 
         base.DoAction();
 
@@ -55,7 +56,6 @@ public class EatAction : SimpleAction
             if (_spoons.CurrentValue == 0)
                 _buttonText.text = "Too tired";
         }
-
     }
 
     public void SetCost(FoodRecipe recipe)

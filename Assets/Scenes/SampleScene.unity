@@ -4565,7 +4565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NeedToComplete: 5
   CurrentValue: 0
-  Description: 'Attend classes:'
+  Description: 'Attend classes: '
   TaskText: {fileID: 196750733}
   IsComplete: 0
   IsEmpty: 0
@@ -20899,10 +20899,10 @@ MonoBehaviour:
   _actionButton: {fileID: 929428760}
   _limitedTime: 1
   _minHoursActivation: 8
-  _maxHoursActivation: 14
+  _maxHoursActivation: 13
   _limitedMinutes: 1
   _minMinutesActivation: 30
-  _maxMinutesActivation: 10
+  _maxMinutesActivation: 55
   _canBeHided: 0
   _studyController: {fileID: 280010356}
   _roomController: {fileID: 280010355}
@@ -26341,7 +26341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1143588254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27817,7 +27817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1226713908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29797,7 +29797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1316033581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33830,7 +33830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1460146396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38264,7 +38264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba66e9448758864db24607f7b837b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startValue: 50
+  _startValue: 5
   _minValue: 0
   _maxValue: 60
 --- !u!1 &1697412982

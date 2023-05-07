@@ -70,7 +70,7 @@ public class SimpleAction : MonoBehaviour
             if (_changeValue > 0)
                 _variableParameter.AddValue(_changeValue);
             else
-                _variableParameter.ReduceValue(-_changeValue);
+                _variableParameter.ReduceValue(-_changeValue); // Reduce(-value)?
         }
 
         if (_timeManagment.Emotions.Excited.IsActive)
