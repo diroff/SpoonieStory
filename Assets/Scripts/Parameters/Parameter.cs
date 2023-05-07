@@ -29,7 +29,7 @@ public class Parameter : MonoBehaviour
         ValueChanged?.Invoke(_currentValue, _maxValue);
     }
 
-    public void AddValue(int count)
+    public virtual void AddValue(int count)
     {
         if (IsMaximum())
             return;

@@ -8,6 +8,8 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private int _startHours;
     [SerializeField] private int _startMinutes;
 
+    [SerializeField] private Parameter _spoons;
+
     [SerializeField] private Grade _grade;
     [SerializeField] private StudyController _studyController;
     [SerializeField] private TaskManager _taskManager;
@@ -15,12 +17,15 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private GameOver _gameOver;
     [SerializeField] private Effects _effects;
 
+    public EmotionController Emotions;
+
     private int _currentDays;
     private int _currentHours;
     private int _currentMinutes;
     private int _currentWeekDayNumber;
 
     private int _previousHour;
+    private int _previousStealHour;
 
     private List<string> _weekDays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
     private string _currentWeekDay;
@@ -44,6 +49,7 @@ public class TimeManagment : MonoBehaviour
         _currentMinutes = _startMinutes;
         _previousHour = _currentHours;
         _currentWeekDayNumber = 0;
+        _previousStealHour = _currentHours - 1;
 
         HoursChanged?.Invoke(_currentHours);
         MinutesChanged?.Invoke(_currentMinutes);
@@ -73,7 +79,28 @@ public class TimeManagment : MonoBehaviour
         MinutesChanged?.Invoke(_currentMinutes);
         SchoolEndChecker();
         OpenTaskManager();
+
+        if (Emotions.Frustrated.IsActive)
+            TryToStealSpoon();
+
         _effects.CheckEffectTimes();
+    }
+
+    private void TryToStealSpoon()
+    {
+        if (_previousStealHour == _currentHours)
+            return;
+
+        int number = Random.Range(0, 21);
+
+        if (number < 11)
+            Debug.Log("Lucky");
+        else
+        {
+            Debug.Log("You lost 1 spoon");
+            _spoons.ReduceValue(1);
+            _previousStealHour = _currentHours;
+        }
     }
 
     public void SetTime(int hours, int minutes)

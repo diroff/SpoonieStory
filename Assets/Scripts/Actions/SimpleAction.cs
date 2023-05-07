@@ -49,16 +49,41 @@ public class SimpleAction : MonoBehaviour
         if (!IsEnoughSpoons() || !IsEqualCondition())
             return;
 
+        if (_timeManagment.Emotions.Sad.IsActive)
+            _hunger.ReduceValue(4);
+
+        if (_timeManagment.Emotions.Excited.IsActive)
+        {
+            if(_actionSpoonsCost == 3)
+                _actionSpoonsCost = 2;
+        }
+
         _spoons.ReduceValue(_actionSpoonsCost);
 
-        if (_changeValue > 0)
-            _variableParameter.AddValue(_changeValue);
+        if(_variableParameter == _hunger && _timeManagment.Emotions.Excited.IsActive)
+        {
+            if (_changeValue > 0)
+                _hunger.AddValue(_changeValue);
+        }
         else
-            _variableParameter.ReduceValue(-_changeValue);
+        {
+            if (_changeValue > 0)
+                _variableParameter.AddValue(_changeValue);
+            else
+                _variableParameter.ReduceValue(-_changeValue);
+        }
 
-        _hunger.ReduceValue(_actionHungerCost);
+        if (_timeManagment.Emotions.Excited.IsActive)
+        {
+            if(_actionHungerCost < 0)
+                _hunger.ReduceValue(_actionHungerCost);
+        }
+        else
+            _hunger.ReduceValue(_actionHungerCost);
+
         _hygiene.ReduceValue(_actionHygieneCost);
         SpendTime();
+
         AlertController.Alerts.CheckParamsAlerts();
         _actions.CheckActionsState();
     }
