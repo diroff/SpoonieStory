@@ -11,6 +11,11 @@ public class HomeworkAction : SimpleAction
         _actions.CheckActionsState();
     }
 
+    public void CheckHomeWorkStatus()
+    {
+        _actions.CheckActionsState();
+    }
+
     protected override bool IsEqualCondition()
     {
         return !_studyController.HomeWorkIsReady;

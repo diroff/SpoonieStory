@@ -11,10 +11,10 @@ public class Lesson : MonoBehaviour
     {
         if (!IsVisited)
         {
+            GetRandomNumber();
             SetLessonType();
             IsVisited = true;
             _schoolTask.AddValue(1);
-            GetRandomNumber();
         }
         else
             SetLessonType();
@@ -41,7 +41,6 @@ public class Lesson : MonoBehaviour
                 _schoolTask.DifficultTopic.MakeEffect();
 
             AlertController.Alerts.ShowAlert(_schoolTask.DifficultAlert);
-            Debug.Log("+");
         }
         else if (_lessonTypeNumber >= 6 && _lessonTypeNumber < 11)
         {
@@ -49,11 +48,10 @@ public class Lesson : MonoBehaviour
                 _schoolTask.BoringTopic.MakeEffect();
 
             AlertController.Alerts.ShowAlert(_schoolTask.BoringAlert);
-            Debug.Log("+");
         }
         else if (_lessonTypeNumber >= 11 && _lessonTypeNumber < 16)
         {
-            //No effect
+            Debug.Log("No effects");
         }
         else if (_lessonTypeNumber >= 16 && _lessonTypeNumber < 19)
         {
@@ -61,7 +59,6 @@ public class Lesson : MonoBehaviour
                 _schoolTask.EasyTopic.MakeEffect();
 
             AlertController.Alerts.ShowAlert(_schoolTask.EasyAlert);
-            Debug.Log("+");
         }
         else if (_lessonTypeNumber >= 19)
         {
@@ -69,7 +66,6 @@ public class Lesson : MonoBehaviour
                 _schoolTask.InterestingTopic.MakeEffect();
 
             AlertController.Alerts.ShowAlert(_schoolTask.InterestingAlert);
-            Debug.Log("+");
         }
     }
 

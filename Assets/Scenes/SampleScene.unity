@@ -4847,8 +4847,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5600,6 +5600,10 @@ MonoBehaviour:
   CurrentValue: 0
   StartValue: 0
   Name: Frustrated
+  UnCompatibilityEmotions:
+  - {fileID: 1645639613}
+  - {fileID: 948168840}
+  IsActive: 0
 --- !u!1 &269625660
 GameObject:
   m_ObjectHideFlags: 0
@@ -21024,6 +21028,9 @@ MonoBehaviour:
   CurrentValue: 0
   StartValue: 0
   Name: Sad
+  UnCompatibilityEmotions:
+  - {fileID: 1645639613}
+  IsActive: 0
 --- !u!1 &940540374
 GameObject:
   m_ObjectHideFlags: 0
@@ -21337,6 +21344,10 @@ MonoBehaviour:
   CurrentValue: 0
   StartValue: 0
   Name: Attentive
+  UnCompatibilityEmotions:
+  - {fileID: 265488591}
+  - {fileID: 1718394272}
+  IsActive: 0
 --- !u!4 &948168841
 Transform:
   m_ObjectHideFlags: 0
@@ -27621,11 +27632,19 @@ MonoBehaviour:
   Bored: {fileID: 1718394272}
   Excited: {fileID: 1645639613}
   Attentive: {fileID: 948168840}
+  _emotions:
+  - {fileID: 932322274}
+  - {fileID: 265488591}
+  - {fileID: 1718394272}
+  - {fileID: 1645639613}
+  - {fileID: 948168840}
   _sadValue: {fileID: 1808142304}
   _frustratedValue: {fileID: 781340714}
   _boredValue: {fileID: 1556719462}
   _excitedValue: {fileID: 868494466}
   _attentiveValue: {fileID: 881730561}
+  _moodletFirstText: {fileID: 2065169157}
+  _moodletSecondText: {fileID: 205688365}
 --- !u!1 &1235965126
 GameObject:
   m_ObjectHideFlags: 0
@@ -34409,6 +34428,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1429657100}
+        m_TargetAssemblyTypeName: HomeworkAction, Assembly-CSharp
+        m_MethodName: CheckHomeWorkStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1506341846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37231,6 +37262,11 @@ MonoBehaviour:
   CurrentValue: 0
   StartValue: 0
   Name: Excited
+  UnCompatibilityEmotions:
+  - {fileID: 932322274}
+  - {fileID: 265488591}
+  - {fileID: 1718394272}
+  IsActive: 0
 --- !u!4 &1645639614
 Transform:
   m_ObjectHideFlags: 0
@@ -38346,6 +38382,10 @@ MonoBehaviour:
   CurrentValue: 0
   StartValue: 0
   Name: Bored
+  UnCompatibilityEmotions:
+  - {fileID: 1645639613}
+  - {fileID: 948168840}
+  IsActive: 0
 --- !u!1 &1718648078
 GameObject:
   m_ObjectHideFlags: 0
@@ -45001,8 +45041,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
