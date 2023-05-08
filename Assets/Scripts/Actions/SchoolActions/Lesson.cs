@@ -4,6 +4,8 @@ public class Lesson : MonoBehaviour
 {
     public SchoolTask _schoolTask;
     public bool IsVisited = false;
+    public int LessonCounter = 0;
+    public Actions Actions;
 
     private int _lessonTypeNumber = 0;
 
@@ -31,6 +33,11 @@ public class Lesson : MonoBehaviour
         _schoolTask.DifficultTopic.StopEffect();
         _schoolTask.EasyTopic.StopEffect();
         _schoolTask.InterestingTopic.StopEffect();
+    }
+
+    public void AddLessonCounter(int count)
+    {
+        LessonCounter += count;
     }
 
     public void SetLessonType()

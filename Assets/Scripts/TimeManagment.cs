@@ -122,7 +122,7 @@ public class TimeManagment : MonoBehaviour
 
         _currentWeekDay = _weekDays[_currentWeekDayNumber];
         DayChanged?.Invoke(_currentDays, _weekDays[_currentWeekDayNumber]);
-        _grade.ReduceValue(5);
+        _grade.ReduceValue(15);
         _schoolStarted = true;
         _studyController.WasInSchool(false);
         TaskManagerSetter();

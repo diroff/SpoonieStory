@@ -8,6 +8,7 @@ public class StudyAction : SimpleAction
     [Space]
     [SerializeField] private Grade _grade;
     [SerializeField] private int _additionalGrade;
+    [SerializeField] private bool _hided = true;
 
     public override void DoAction()
     {
@@ -17,5 +18,14 @@ public class StudyAction : SimpleAction
         LessonSchedule schedule = _studyController.CheckSchedule();
         
         _roomController.OpenRoom(schedule.Room);
+        _actions.CheckActionsState();
+    }
+
+    protected override bool IsEqualCondition()
+    {
+        if(_hided)
+            return _spoons.CurrentValue > 1;
+        else
+            return true;
     }
 }

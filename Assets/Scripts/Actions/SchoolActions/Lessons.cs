@@ -4,6 +4,7 @@ using UnityEngine;
 public class Lessons : MonoBehaviour
 {
     [SerializeField] private List<Lesson> _lessons;
+    [SerializeField] private Parameter _spoons;
 
     public void ResetLessons()
     {
@@ -14,6 +15,12 @@ public class Lessons : MonoBehaviour
     public void StopLastEffect()
     {
         foreach (Lesson lesson in _lessons)
+        {
+            lesson.Actions.CheckActionsState();
+            _spoons.ReduceValue(lesson.LessonCounter);
+            Debug.Log("Lost spoons:" + lesson.LessonCounter);
+            lesson.LessonCounter = 0;
             lesson.StopEffects();
+        }
     }
 }
