@@ -39,6 +39,9 @@ public class CookingAction : SimpleAction
             if (_dishes.CurrentValue == 0)
                 _buttonText.text = "Everything is dirty";
 
+            if (_hunger.CurrentValue == 0)
+                _buttonText.text = "Too hungry!";
+
             if (_spoons.CurrentValue == 0)
                 _buttonText.text = "Too tired";
         }

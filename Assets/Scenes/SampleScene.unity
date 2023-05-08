@@ -8785,9 +8785,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1098552672}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: set_interactable
+      - m_Target: {fileID: 1098552670}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8797,9 +8797,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1038220669}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: set_interactable
+      - m_Target: {fileID: 1038220667}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14172,9 +14172,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "It\u2019s not really a separate room or anything, just a corner filled
     with everything you need to cook up a somewhat decent quick meal. There is even
-    a working mini-fridge here and one of the cupboards hosts an electric range.\n
-    \r\nYou do wonder how many fires in this place started with some students feeling
-    up to some cooking and failing to come to an agreement with this thing.\r\n"
+    a working mini-fridge here and one of the cupboards hosts an electric range.\n\r\nYou
+    do wonder how many fires in this place started with some students feeling up
+    to some cooking and failing to come to an agreement with this thing.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
