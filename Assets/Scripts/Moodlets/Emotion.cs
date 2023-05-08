@@ -5,6 +5,7 @@ public class Emotion : MonoBehaviour
 {
     public int CurrentValue;
     public int StartValue;
+    public Sprite Icon;
     public string Name;
 
     public List<Emotion> UnCompatibilityEmotions;

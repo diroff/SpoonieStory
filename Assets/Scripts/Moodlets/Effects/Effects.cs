@@ -14,6 +14,7 @@ public class Effects : MonoBehaviour
     public TimedEffect HomeworkDoneEffect;
     public TimedEffect AllTasksCompleteEffect;
     public TimedEffect FailedTasksEffect;
+    public TimedEffect CallEffect;
 
     public void CheckEffectTimes()
     {
