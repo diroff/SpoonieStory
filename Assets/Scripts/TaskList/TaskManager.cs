@@ -102,7 +102,7 @@ public class TaskManager : MonoBehaviour
             }
         }
 
-        if (!_schoolTask.IsComplete)
+        if (!_schoolTask.IsComplete && _timeManagment.CurrentWeekDay != "Sunday" && _timeManagment.CurrentWeekDay != "Monday")
             TodayFailedTasks++;
 
         YesterdayFailedTasks = TodayFailedTasks;

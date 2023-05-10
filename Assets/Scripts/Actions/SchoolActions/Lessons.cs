@@ -18,7 +18,6 @@ public class Lessons : MonoBehaviour
         {
             lesson.Actions.CheckActionsState();
             _spoons.ReduceValue(lesson.LessonCounter);
-            Debug.Log("Lost spoons:" + lesson.LessonCounter);
             lesson.LessonCounter = 0;
             lesson.StopEffects();
         }

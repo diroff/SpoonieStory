@@ -14,17 +14,39 @@ public class SleepEvent : MonoBehaviour
     public void CalculateSpoonsCount(int sleptHours)
     {
         _spoons.AddValue(sleptHours);
-        Debug.Log("Slept hours:" + sleptHours);
 
-        int bonus = CalculateAdditionalSpoons();
+        int bonus = CalculateAdditionalSpoons(sleptHours);
 
         _spoons.AddValue(bonus);
         Debug.Log("Slept bonus:" + bonus);
     }
 
-    private int CalculateAdditionalSpoons()
+    private int CalculateAdditionalSpoons(int sleptHours)
     {
         int randomValue = Random.Range(0, 21);
+
+        if(sleptHours <= 1)
+        {
+            if (randomValue < 4)
+            {
+                AlertController.Alerts.ShowAlert(_nightmareAlert);
+                _effects.NightmareEffect.MakeEffect();
+                return -2;
+            }
+
+            if (randomValue >= 4 && randomValue < 19)
+            {
+                AlertController.Alerts.ShowAlert(_neutralAlert);
+                return 0;
+            }
+
+            if (randomValue >= 19)
+            {
+                AlertController.Alerts.ShowAlert(_refreshAlert);
+                _effects.SleptWellEffect.MakeEffect();
+                return 2;
+            }
+        }
 
         if (randomValue < 4)
         {

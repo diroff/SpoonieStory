@@ -14,12 +14,6 @@ public class EmotionController : MonoBehaviour
 
     [SerializeField] private List<Emotion> _emotions; 
 
-    [SerializeField] private TextMeshProUGUI _sadValue;
-    [SerializeField] private TextMeshProUGUI _frustratedValue;
-    [SerializeField] private TextMeshProUGUI _boredValue;
-    [SerializeField] private TextMeshProUGUI _excitedValue;
-    [SerializeField] private TextMeshProUGUI _attentiveValue;
-
     [Space]
     [SerializeField] private TextMeshProUGUI _moodletFirstText;
     [SerializeField] private TextMeshProUGUI _moodletSecondText;
@@ -119,15 +113,6 @@ public class EmotionController : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void Update()
-    {
-        _sadValue.text = "Sad:" + Sad.CurrentValue;
-        _frustratedValue.text = "Frustrated:" + Frustrated.CurrentValue;
-        _boredValue.text = "Bored:" + Bored.CurrentValue;
-        _excitedValue.text = "Excited:" + Excited.CurrentValue;
-        _attentiveValue.text = "Attentive:" + Attentive.CurrentValue;
     }
 
     public void ChangeSad(int value)

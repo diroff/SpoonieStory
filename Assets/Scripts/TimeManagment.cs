@@ -17,6 +17,8 @@ public class TimeManagment : MonoBehaviour
     [SerializeField] private GameOver _gameOver;
     [SerializeField] private Effects _effects;
 
+    [SerializeField] private GameObject _finalScreen;
+
     public EmotionController Emotions;
 
     private int _currentDays;
@@ -27,7 +29,7 @@ public class TimeManagment : MonoBehaviour
     private int _previousHour;
     private int _previousStealHour;
 
-    private List<string> _weekDays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+    private List<string> _weekDays = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
     private string _currentWeekDay;
     private bool _schoolStarted = true;
 
@@ -41,6 +43,11 @@ public class TimeManagment : MonoBehaviour
     public UnityAction<int> HoursChanged;
     public UnityAction<int> MinutesChanged;
     public UnityEvent SchoolEnded;
+
+    private void Awake()
+    {
+        _currentWeekDay = _weekDays[0];
+    }
 
     private void Start()
     {
@@ -116,6 +123,9 @@ public class TimeManagment : MonoBehaviour
     {
         _currentDays++;
         _currentWeekDayNumber++;
+
+        if (_currentDays >= 15)
+            _finalScreen.gameObject.SetActive(true);
 
         if (_currentWeekDayNumber >= _weekDays.Count)
             _currentWeekDayNumber = 0;
