@@ -31697,7 +31697,7 @@ MonoBehaviour:
   _maxHoursActionCost: 0
   _maxMinutesActionCost: 0
   _timeManagment: {fileID: 24715461}
-  _disableInMaximum: 1
+  _disableInMaximum: 0
   _disableInMinimum: 1
   _actions: {fileID: 444055711}
   _actionButton: {fileID: 1429657097}
